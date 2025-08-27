@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Sistema</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f7fa;
+            color: #333;
+        }
+
+        .dashboard-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .dashboard-header {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .dashboard-header h1 {
+            color: #667eea;
+            font-size: 2rem;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .user-info span {
+            color: #666;
+        }
+
+        .logout-btn {
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .logout-btn:hover {
+            background: #5a67d8;
+        }
+
+        .dashboard-nav {
+            background: white;
+            padding: 1rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            color: #495057;
+            text-decoration: none;
+        }
+
+        .nav-btn:hover {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+            transform: translateY(-2px);
+        }
+
+        .dashboard-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            min-height: 400px;
+        }
+
+        .welcome-message {
+            text-align: center;
+            padding: 3rem;
+            color: #666;
+        }
+
+        .welcome-message h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .dashboard-header {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+            
+            .dashboard-nav {
+                justify-content: center;
+            }
+            
+            .nav-btn {
+                flex: 1;
+                min-width: 120px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <h1>🏠 Dashboard do Sistema</h1>
+            <div class="user-info">
+                <span>Olá, <span id="userName">Usuário</span>!</span>
+                <button class="logout-btn" onclick="authService.logout()">🚪 Sair</button>
+            </div>
+        </header>
+
+        <nav class="dashboard-nav">
+            <a href="categorias.html" class="nav-btn">📁 Categorias</a>
+            <a href="fornecedores.html" class="nav-btn">🏢 Fornecedores</a>
+            <a href="produtos.html" class="nav-btn">📦 Produtos</a>
+            <a href="cadastros.html" class="nav-btn">➕ Cadastros</a>
+        </nav>
+
+        <main class="dashboard-content">
+            <div class="welcome-message">
+                <h2>Bem-vindo ao Sistema! 🎉</h2>
+                <p>Selecione uma das opções acima para gerenciar seu estoque.</p>
+                <p>Você está logado com token JWT e pode acessar todas as funcionalidades.</p>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        class AuthService {
+            constructor() {
+                this.tokenKey = 'jwt_token';
+                this.userKey = 'user_data';
+            }
+
+            getToken() {
+                return localStorage.getItem(this.tokenKey);
+            }
+
+            getUser() {
+                const user = localStorage.getItem(this.userKey);
+                return user ? JSON.parse(user) : null;
+            }
+
+            isLoggedIn() {
+                return this.getToken() !== null;
+            }
+
+            logout() {
+                localStorage.removeItem(this.tokenKey);
+                localStorage.removeItem(this.userKey);
+                window.location.href = 'index.html';
+            }
+        }
+
+        const authService = new AuthService();
+
+        document.addEventListener('DOMContentLoaded', function() {
+            if (!authService.isLoggedIn()) {
+                window.location.href = 'index.html';
+                return;
+            }
+
+            const user = authService.getUser();
+            if (user) {
+                document.getElementById('userName').textContent = user.nome;
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico de Conexão API</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 800px;
+            overflow: hidden;
+        }
+        
+        .header {
+            background: #4a6fc7;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid #4a6fc7;
+        }
+        
+        .card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .card h3 span {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        
+        .test-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .test-item:last-child {
+            border-bottom: none;
+        }
+        
+        .status {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .success {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .btn {
+            background: #4a6fc7;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        
+        .btn:hover {
+            background: #3a5bb0;
+            transform: translateY(-2px);
+        }
+        
+        .btn span {
+            margin-right: 8px;
+        }
+        
+        .url-test {
+            margin-top: 15px;
+            padding: 15px;
+            background: #e9ecef;
+            border-radius: 6px;
+            font-family: monospace;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .result-box {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 6px;
+            background: #2c3e50;
+            color: white;
+            font-family: monospace;
+            font-size: 13px;
+            max-height: 200px;
+            overflow-y: auto;
+            display: none;
+        }
+        
+        .solution {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+            display: none;
+        }
+        
+        .solution h4 {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .solution h4 span {
+            margin-right: 8px;
+        }
+        
+        .solution-steps {
+            padding-left: 20px;
+        }
+        
+        .solution-steps li {
+            margin-bottom: 8px;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .visible {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔍 Diagnóstico de Conexão com a API</h1>
+            <p>Verificando problemas de conexão com o servidor</p>
+        </div>
+        
+        <div class="content">
+            <div class="card">
+                <h3><span>📋</span> Testes de Conexão</h3>
+                
+                <div class="test-item">
+                    <div>Servidor local (localhost)</div>
+                    <div id="test-localhost" class="status">Testando...</div>
+                </div>
+                
+                <div class="test-item">
+                    <div>Servidor na porta 80</div>
+                    <div id="test-port-80" class="status">Testando...</div>
+                </div>
+                
+                <div class="test-item">
+                    <div>Servidor na porta 8000</div>
+                    <div id="test-port-8000" class="status">Testando...</div>
+                </div>
+                
+                <div class="test-item">
+                    <div>Endpoint de login da API</div>
+                    <div id="test-api-login" class="status">Testando...</div>
+                </div>
+                
+                <div class="test-item">
+                    <div>Configuração CORS</div>
+                    <div id="test-cors" class="status">Testando...</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3><span>🔧</span> Ferramentas de Diagnóstico</h3>
+                
+                <div class="url-test">
+                    <div>http://localhost/auth/login</div>
+                    <button class="btn" onclick="testUrl('http://localhost/auth/login')">
+                        <span>🔍</span> Testar URL
+                    </button>
+                </div>
+                
+                <div class="url-test">
+                    <div>http://localhost:8000/auth/login</div>
+                    <button class="btn" onclick="testUrl('http://localhost:8000/auth/login')">
+                        <span>🔍</span> Testar URL
+                    </button>
+                </div>
+                
+                <div id="result-box" class="result-box">
+                    <div id="result-content"></div>
+                </div>
+            </div>
+            
+            <div id="solution" class="solution">
+                <h4><span>✅</span> Solução Encontrada</h4>
+                <ol class="solution-steps" id="solution-steps">
+                    <!-- As soluções serão inseridas aqui via JavaScript -->
+                </ol>
+            </div>
+            
+            <button id="retry-btn" class="btn" onclick="runAllTests()" style="width: 100%; margin-top: 20px;">
+                <span>🔄</span> Executar Testes Novamente
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Função para testar uma URL específica
+        async function testUrl(url) {
+            const resultBox = document.getElementById('result-box');
+            const resultContent = document.getElementById('result-content');
+            
+            resultContent.innerHTML = `Testando ${url}...`;
+            resultBox.classList.add('visible');
+            
+            try {
+                const startTime = new Date().getTime();
+                const response = await fetch(url, {
+                    method: 'OPTIONS', // Usamos OPTIONS para testar CORS sem afetar dados
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }
+                });
+                const endTime = new Date().getTime();
+                
+                const responseTime = endTime - startTime;
+                
+                let resultText = `
+URL: ${url}
+Status: ${response.status} ${response.statusText}
+Tempo de resposta: ${responseTime}ms
+CORS: ${response.headers.get('Access-Control-Allow-Origin') || 'Não configurado'}
+
+Cabeçalhos de resposta:`;
+                
+                // Listar todos os cabeçalhos
+                for (const [key, value] of response.headers.entries()) {
+                    resultText += `\n${key}: ${value}`;
+                }
+                
+                resultContent.textContent = resultText;
+                
+            } catch (error) {
+                resultContent.textContent = `Erro ao testar ${url}:\n${error.message}`;
+            }
+        }
+        
+        // Função para testar um endpoint específico
+        async function testEndpoint(url, testId) {
+            const statusElement = document.getElementById(testId);
+            
+            try {
+                const response = await fetch(url, {
+                    method: 'OPTIONS',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }
+                });
+                
+                if (response.status >= 200 && response.status < 500) {
+                    statusElement.textContent = 'Conectado';
+                    statusElement.className = 'status success';
+                    return true;
+                } else {
+                    statusElement.textContent = 'Erro: ' + response.status;
+                    statusElement.className = 'status error';
+                    return false;
+                }
+            } catch (error) {
+                statusElement.textContent = 'Falha na conexão';
+                statusElement.className = 'status error';
+                return false;
+            }
+        }
+        
+        // Executar todos os testes
+        async function runAllTests() {
+            // Resetar status
+            document.querySelectorAll('.status').forEach(el => {
+                el.textContent = 'Testando...';
+                el.className = 'status';
+            });
+            
+            // Executar testes sequencialmente
+            const tests = [
+                { url: 'http://localhost', id: 'test-localhost' },
+                { url: 'http://localhost:80', id: 'test-port-80' },
+                { url: 'http://localhost:8000', id: 'test-port-8000' },
+                { url: 'http://localhost/auth/login', id: 'test-api-login' },
+                { url: 'http://localhost', id: 'test-cors', corsTest: true }
+            ];
+            
+            let allPassed = true;
+            
+            for (const test of tests) {
+                const passed = await testEndpoint(test.url, test.id);
+                if (!passed) allPassed = false;
+                await new Promise(resolve => setTimeout(resolve, 500)); // Pequeno delay entre testes
+            }
+            
+            // Mostrar solução se algum teste falhou
+            if (!allPassed) {
+                showSolution();
+            }
+        }
+        
+        // Mostrar soluções para os problemas detectados
+        function showSolution() {
+            const solution = document.getElementById('solution');
+            const solutionSteps = document.getElementById('solution-steps');
+            
+            solutionSteps.innerHTML = `
+                <li>Verifique se o servidor PHP está rodando (XAMPP/WAMP/Laragon)</li>
+                <li>Se estiver usando PHP built-in server, execute: <code>php -S localhost:8000 -t /caminho/para/seu/projeto</code></li>
+                <li>Verifique se a URL da API no código JavaScript está correta</li>
+                <li>Adicione headers CORS no PHP:
+                    <pre>
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
+header('Access-Control-Allow-Headers: Content-Type, Authorization');
+                    </pre>
+                </li>
+                <li>Verifique se o endpoint /auth/login existe em sua API</li>
+            `;
+            
+            solution.style.display = 'block';
+        }
+        
+        // Executar testes quando a página carregar
+        window.onload = runAllTests;
+    </script>
+</body>
+</html>

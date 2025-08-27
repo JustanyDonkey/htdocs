@@ -1,0 +1,3047 @@
+[2025-08-09 12:54:33.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[HY000] [1049] Unknown database 'bancodohelio'
+Code: 1049
+File: C:\xampp\htdocs\myAPI\src\db\Database.php
+Line: 121
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\db\Database.php(121): PDO->__construct('mysql:host=127....', 'root', Object(SensitiveParameterValue), Array)
+#1 C:\xampp\htdocs\myAPI\src\db\Database.php(69): Database::connect()
+#2 C:\xampp\htdocs\myAPI\src\DAO\CategoriaDAO.php(15): Database::getConnection()
+#3 C:\xampp\htdocs\myAPI\src\controllers\CategoriaControl.php(10): CategoriaDAO->readAll()
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(70): CategoriaControl->index()
+#5 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#6 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#7 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#8 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(326): Router->run()
+#9 C:\xampp\htdocs\api.php(4): Roteador->start()
+#10 {main} 
+ **************************************************************************************************** 
+[2025-08-09 12:54:34.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[HY000] [1049] Unknown database 'bancodohelio'
+Code: 1049
+File: C:\xampp\htdocs\myAPI\src\db\Database.php
+Line: 121
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\db\Database.php(121): PDO->__construct('mysql:host=127....', 'root', Object(SensitiveParameterValue), Array)
+#1 C:\xampp\htdocs\myAPI\src\db\Database.php(69): Database::connect()
+#2 C:\xampp\htdocs\myAPI\src\DAO\CategoriaDAO.php(15): Database::getConnection()
+#3 C:\xampp\htdocs\myAPI\src\controllers\CategoriaControl.php(10): CategoriaDAO->readAll()
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(70): CategoriaControl->index()
+#5 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#6 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#7 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#8 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(326): Router->run()
+#9 C:\xampp\htdocs\api.php(4): Roteador->start()
+#10 {main} 
+ **************************************************************************************************** 
+[2025-08-09 12:57:11.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'emailFornecedor' in 'field list'
+Code: 42S22
+File: C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php
+Line: 19
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php(19): PDO->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php(9): FornecedorDAO->readAll()
+#2 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(149): FornecedorControl->index()
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(327): Router->run()
+#7 C:\xampp\htdocs\api.php(4): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-08-09 12:57:12.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'emailFornecedor' in 'field list'
+Code: 42S22
+File: C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php
+Line: 19
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php(19): PDO->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php(9): FornecedorDAO->readAll()
+#2 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(149): FornecedorControl->index()
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(327): Router->run()
+#7 C:\xampp\htdocs\api.php(4): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-08-09 12:58:45.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'emailFornecedor' in 'field list'
+Code: 42S22
+File: C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php
+Line: 19
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php(19): PDO->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php(9): FornecedorDAO->readAll()
+#2 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(149): FornecedorControl->index()
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(327): Router->run()
+#7 C:\xampp\htdocs\api.php(4): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-08-09 13:03:09.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'emailFornecedor' in 'field list'
+Code: 42S22
+File: C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php
+Line: 19
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php(19): PDO->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php(9): FornecedorDAO->readAll()
+#2 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(149): FornecedorControl->index()
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(327): Router->run()
+#7 C:\xampp\htdocs\api.php(4): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-08-09 13:03:10.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'emailFornecedor' in 'field list'
+Code: 42S22
+File: C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php
+Line: 19
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php(19): PDO->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php(9): FornecedorDAO->readAll()
+#2 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(149): FornecedorControl->index()
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(327): Router->run()
+#7 C:\xampp\htdocs\api.php(4): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-08-09 13:12:02.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'email' in 'field list'
+Code: 42S22
+File: C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php
+Line: 19
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php(19): PDO->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php(9): FornecedorDAO->readAll()
+#2 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(149): FornecedorControl->index()
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(327): Router->run()
+#7 C:\xampp\htdocs\api.php(4): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-08-09 13:12:03.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'email' in 'field list'
+Code: 42S22
+File: C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php
+Line: 19
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php(19): PDO->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php(9): FornecedorDAO->readAll()
+#2 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(149): FornecedorControl->index()
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(327): Router->run()
+#7 C:\xampp\htdocs\api.php(4): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-08-09 13:12:04.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'email' in 'field list'
+Code: 42S22
+File: C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php
+Line: 19
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php(19): PDO->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php(9): FornecedorDAO->readAll()
+#2 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(149): FornecedorControl->index()
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(327): Router->run()
+#7 C:\xampp\htdocs\api.php(4): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-08-09 13:12:32.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'telefoneFornecedor' in 'field list'
+Code: 42S22
+File: C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php
+Line: 19
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php(19): PDO->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php(9): FornecedorDAO->readAll()
+#2 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(149): FornecedorControl->index()
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(327): Router->run()
+#7 C:\xampp\htdocs\api.php(4): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-08-09 13:12:33.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'telefoneFornecedor' in 'field list'
+Code: 42S22
+File: C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php
+Line: 19
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php(19): PDO->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php(9): FornecedorDAO->readAll()
+#2 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(149): FornecedorControl->index()
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(327): Router->run()
+#7 C:\xampp\htdocs\api.php(4): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-08-09 13:12:59.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'enderecoFornecedor' in 'field list'
+Code: 42S22
+File: C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php
+Line: 19
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php(19): PDO->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php(9): FornecedorDAO->readAll()
+#2 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(149): FornecedorControl->index()
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(327): Router->run()
+#7 C:\xampp\htdocs\api.php(4): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-08-09 13:13:33.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'enderecoFornecedor' in 'field list'
+Code: 42S22
+File: C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php
+Line: 19
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php(19): PDO->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php(9): FornecedorDAO->readAll()
+#2 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(149): FornecedorControl->index()
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(327): Router->run()
+#7 C:\xampp\htdocs\api.php(4): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-08-09 13:13:34.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'enderecoFornecedor' in 'field list'
+Code: 42S22
+File: C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php
+Line: 19
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php(19): PDO->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php(9): FornecedorDAO->readAll()
+#2 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(149): FornecedorControl->index()
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(327): Router->run()
+#7 C:\xampp\htdocs\api.php(4): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-08-09 13:13:34.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'enderecoFornecedor' in 'field list'
+Code: 42S22
+File: C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php
+Line: 19
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php(19): PDO->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php(9): FornecedorDAO->readAll()
+#2 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(149): FornecedorControl->index()
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(327): Router->run()
+#7 C:\xampp\htdocs\api.php(4): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-08-09 13:17:28.000] [Throwable] 
+ Throwable:
+Message: Class "ProdutoController" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\routes\Roteador.php
+Line: 235
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#3 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(336): Router->run()
+#4 C:\xampp\htdocs\api.php(4): Roteador->start()
+#5 {main} 
+ **************************************************************************************************** 
+[2025-08-09 13:17:29.000] [Throwable] 
+ Throwable:
+Message: Class "ProdutoController" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\routes\Roteador.php
+Line: 235
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#3 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(336): Router->run()
+#4 C:\xampp\htdocs\api.php(4): Roteador->start()
+#5 {main} 
+ **************************************************************************************************** 
+[2025-08-09 13:18:19.000] [Throwable] 
+ Throwable:
+Message: Class "ProdutoController" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\routes\Roteador.php
+Line: 235
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#3 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(336): Router->run()
+#4 C:\xampp\htdocs\api.php(4): Roteador->start()
+#5 {main} 
+ **************************************************************************************************** 
+[2025-08-09 13:18:19.000] [Throwable] 
+ Throwable:
+Message: Class "ProdutoController" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\routes\Roteador.php
+Line: 235
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#3 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(336): Router->run()
+#4 C:\xampp\htdocs\api.php(4): Roteador->start()
+#5 {main} 
+ **************************************************************************************************** 
+[2025-08-09 13:18:20.000] [Throwable] 
+ Throwable:
+Message: Class "ProdutoController" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\routes\Roteador.php
+Line: 235
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#3 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(336): Router->run()
+#4 C:\xampp\htdocs\api.php(4): Roteador->start()
+#5 {main} 
+ **************************************************************************************************** 
+[2025-08-09 13:19:27.000] [Throwable] 
+ Throwable:
+Message: Class "ProdutoController" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\routes\Roteador.php
+Line: 235
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#3 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(336): Router->run()
+#4 C:\xampp\htdocs\api.php(4): Roteador->start()
+#5 {main} 
+ **************************************************************************************************** 
+[2025-08-09 13:19:27.000] [Throwable] 
+ Throwable:
+Message: Class "ProdutoController" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\routes\Roteador.php
+Line: 235
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#3 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(336): Router->run()
+#4 C:\xampp\htdocs\api.php(4): Roteador->start()
+#5 {main} 
+ **************************************************************************************************** 
+[2025-08-09 13:19:28.000] [Throwable] 
+ Throwable:
+Message: Class "ProdutoController" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\routes\Roteador.php
+Line: 235
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#3 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(336): Router->run()
+#4 C:\xampp\htdocs\api.php(4): Roteador->start()
+#5 {main} 
+ **************************************************************************************************** 
+[2025-08-09 13:19:28.000] [Throwable] 
+ Throwable:
+Message: Class "ProdutoController" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\routes\Roteador.php
+Line: 235
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#3 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(336): Router->run()
+#4 C:\xampp\htdocs\api.php(4): Roteador->start()
+#5 {main} 
+ **************************************************************************************************** 
+[2025-08-09 13:20:10.000] [Throwable] 
+ Throwable:
+Message: Class "ProdutoController" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\routes\Roteador.php
+Line: 235
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#3 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(336): Router->run()
+#4 C:\xampp\htdocs\api.php(4): Roteador->start()
+#5 {main} 
+ **************************************************************************************************** 
+[2025-08-09 13:20:11.000] [Throwable] 
+ Throwable:
+Message: Class "ProdutoController" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\routes\Roteador.php
+Line: 235
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#3 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(336): Router->run()
+#4 C:\xampp\htdocs\api.php(4): Roteador->start()
+#5 {main} 
+ **************************************************************************************************** 
+[2025-08-09 13:20:11.000] [Throwable] 
+ Throwable:
+Message: Class "ProdutoController" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\routes\Roteador.php
+Line: 235
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#3 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(336): Router->run()
+#4 C:\xampp\htdocs\api.php(4): Roteador->start()
+#5 {main} 
+ **************************************************************************************************** 
+[2025-08-09 13:20:12.000] [Throwable] 
+ Throwable:
+Message: Class "ProdutoController" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\routes\Roteador.php
+Line: 235
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#3 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(336): Router->run()
+#4 C:\xampp\htdocs\api.php(4): Roteador->start()
+#5 {main} 
+ **************************************************************************************************** 
+[2025-08-09 13:20:12.000] [Throwable] 
+ Throwable:
+Message: Class "ProdutoController" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\routes\Roteador.php
+Line: 235
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#3 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(336): Router->run()
+#4 C:\xampp\htdocs\api.php(4): Roteador->start()
+#5 {main} 
+ **************************************************************************************************** 
+[2025-08-09 13:21:06.000] [Throwable] 
+ Throwable:
+Message: Class "ProdutoDAO" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\controllers\ProdutoController.php
+Line: 10
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(235): ProdutoController->index()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(336): Router->run()
+#5 C:\xampp\htdocs\api.php(4): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-09 13:21:07.000] [Throwable] 
+ Throwable:
+Message: Class "ProdutoDAO" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\controllers\ProdutoController.php
+Line: 10
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(235): ProdutoController->index()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(336): Router->run()
+#5 C:\xampp\htdocs\api.php(4): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-09 13:21:38.000] [Throwable] 
+ Throwable:
+Message: Class "ProdutoDAO" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\controllers\ProdutoController.php
+Line: 10
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(235): ProdutoController->index()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(336): Router->run()
+#5 C:\xampp\htdocs\api.php(4): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-09 13:21:38.000] [Throwable] 
+ Throwable:
+Message: Class "ProdutoDAO" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\controllers\ProdutoController.php
+Line: 10
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(235): ProdutoController->index()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(336): Router->run()
+#5 C:\xampp\htdocs\api.php(4): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-09 13:23:00.000] [Throwable] 
+ Throwable:
+Message: Class "ProdutoDAO" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\controllers\ProdutoController.php
+Line: 11
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(235): ProdutoController->index()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(336): Router->run()
+#5 C:\xampp\htdocs\api.php(4): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-09 13:23:39.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'emailProduto' in 'field list'
+Code: 42S22
+File: C:\xampp\htdocs\myAPI\src\DAO\ProdutoDAO.php
+Line: 20
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\DAO\ProdutoDAO.php(20): PDO->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\myAPI\src\controllers\ProdutoController.php(12): ProdutoDAO->readAll()
+#2 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(235): ProdutoController->index()
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(336): Router->run()
+#7 C:\xampp\htdocs\api.php(4): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-08-09 13:23:41.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'emailProduto' in 'field list'
+Code: 42S22
+File: C:\xampp\htdocs\myAPI\src\DAO\ProdutoDAO.php
+Line: 20
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\DAO\ProdutoDAO.php(20): PDO->query('SELECT\r\n       ...')
+#1 C:\xampp\htdocs\myAPI\src\controllers\ProdutoController.php(12): ProdutoDAO->readAll()
+#2 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(235): ProdutoController->index()
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(336): Router->run()
+#7 C:\xampp\htdocs\api.php(4): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-08-09 23:14:14.000] [Throwable] 
+ Throwable:
+Message: Call to undefined method ProdutoController::show()
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\routes\Roteador.php
+Line: 252
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}('5')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#3 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(350): Router->run()
+#4 C:\xampp\htdocs\api.php(4): Roteador->start()
+#5 {main} 
+ **************************************************************************************************** 
+[2025-08-09 23:15:04.000] [Throwable] 
+ Throwable:
+Message: Call to undefined method ProdutoDAO::readById()
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\controllers\ProdutoController.php
+Line: 26
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(252): ProdutoController->show(5)
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}('5')
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(350): Router->run()
+#5 C:\xampp\htdocs\api.php(4): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-09 23:16:26.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'emailFornecedor' in 'field list'
+Code: 42S22
+File: C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php
+Line: 37
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php(37): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php(23): FornecedorDAO->readById(5)
+#2 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(165): FornecedorControl->show(5)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}('5')
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(350): Router->run()
+#7 C:\xampp\htdocs\api.php(4): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-08-09 23:32:48.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'telefoneFornecedor' in 'field list'
+Code: 42S22
+File: C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php
+Line: 37
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php(37): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php(23): FornecedorDAO->readById(5)
+#2 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(165): FornecedorControl->show(5)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}('5')
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(350): Router->run()
+#7 C:\xampp\htdocs\api.php(4): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-08-09 23:33:07.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'enderecoFornecedor' in 'field list'
+Code: 42S22
+File: C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php
+Line: 37
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php(37): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php(23): FornecedorDAO->readById(5)
+#2 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(165): FornecedorControl->show(5)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}('5')
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(350): Router->run()
+#7 C:\xampp\htdocs\api.php(4): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-08-09 23:53:05.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+Code: HY093
+File: C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php
+Line: 71
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php(71): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php(42): FornecedorDAO->create(Object(Fornecedor))
+#2 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(185): FornecedorControl->store(Object(stdClass))
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(350): Router->run()
+#7 C:\xampp\htdocs\api.php(4): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-08-10 00:27:24.000] [Throwable] 
+ Throwable:
+Message: Unknown named parameter $nomeFornecedor
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\routes\Roteador.php
+Line: 200
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}('7')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#3 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(352): Router->run()
+#4 C:\xampp\htdocs\api.php(4): Roteador->start()
+#5 {main} 
+ **************************************************************************************************** 
+[2025-08-10 00:27:26.000] [Throwable] 
+ Throwable:
+Message: Unknown named parameter $nomeFornecedor
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\routes\Roteador.php
+Line: 200
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}('7')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#3 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(352): Router->run()
+#4 C:\xampp\htdocs\api.php(4): Roteador->start()
+#5 {main} 
+ **************************************************************************************************** 
+[2025-08-10 01:34:15.000] [Throwable] 
+ Throwable:
+Message: FornecedorMiddleware::IsValidNomeFornecedor(): Return value must be of type FornecedorMiddleware, none returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\FornecedorMiddleware.php
+Line: 105
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(182): FornecedorMiddleware->IsValidNomeFornecedor('terq')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(355): Router->run()
+#5 C:\xampp\htdocs\api.php(4): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-10 02:10:32.000] [Throwable] 
+ Throwable:
+Message: Call to undefined method FornecedorMiddleware::IsValidNomeFornecedor()
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\routes\Roteador.php
+Line: 202
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}('7')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#3 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(355): Router->run()
+#4 C:\xampp\htdocs\api.php(4): Roteador->start()
+#5 {main} 
+ **************************************************************************************************** 
+[2025-08-10 02:33:25.000] [Throwable] 
+ Throwable:
+Message: Unknown named parameter $nomeFornecedor
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\routes\Roteador.php
+Line: 202
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}('7')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#3 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(355): Router->run()
+#4 C:\xampp\htdocs\api.php(4): Roteador->start()
+#5 {main} 
+ **************************************************************************************************** 
+[2025-08-10 02:33:26.000] [Throwable] 
+ Throwable:
+Message: Unknown named parameter $nomeFornecedor
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\routes\Roteador.php
+Line: 202
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}('7')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#3 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(355): Router->run()
+#4 C:\xampp\htdocs\api.php(4): Roteador->start()
+#5 {main} 
+ **************************************************************************************************** 
+[2025-08-10 02:45:46.000] [Throwable] 
+ Throwable:
+Message: Fornecedor::setIdFornecedor(): Argument #1 ($idFornecedor) must be of type int, null given, called in C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php on line 58
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\models\Fornecedor.php
+Line: 27
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php(58): Fornecedor->setIdFornecedor(NULL)
+#1 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(207): FornecedorControl->edit(Object(stdClass))
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}('7')
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#5 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(355): Router->run()
+#6 C:\xampp\htdocs\api.php(4): Roteador->start()
+#7 {main} 
+ **************************************************************************************************** 
+[2025-08-10 02:45:48.000] [Throwable] 
+ Throwable:
+Message: Fornecedor::setIdFornecedor(): Argument #1 ($idFornecedor) must be of type int, null given, called in C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php on line 58
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\models\Fornecedor.php
+Line: 27
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php(58): Fornecedor->setIdFornecedor(NULL)
+#1 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(207): FornecedorControl->edit(Object(stdClass))
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}('7')
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#5 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(355): Router->run()
+#6 C:\xampp\htdocs\api.php(4): Roteador->start()
+#7 {main} 
+ **************************************************************************************************** 
+[2025-08-10 02:51:50.000] [Throwable] 
+ Throwable:
+Message: Fornecedor::setIdFornecedor(): Argument #1 ($idFornecedor) must be of type int, null given, called in C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php on line 58
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\models\Fornecedor.php
+Line: 27
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php(58): Fornecedor->setIdFornecedor(NULL)
+#1 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(207): FornecedorControl->edit(Object(stdClass))
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}('7')
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#5 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(355): Router->run()
+#6 C:\xampp\htdocs\api.php(4): Roteador->start()
+#7 {main} 
+ **************************************************************************************************** 
+[2025-08-10 02:53:27.000] [Throwable] 
+ Throwable:
+Message: Fornecedor::setIdFornecedor(): Argument #1 ($idFornecedor) must be of type int, null given, called in C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php on line 59
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\models\Fornecedor.php
+Line: 27
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php(59): Fornecedor->setIdFornecedor(NULL)
+#1 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(206): FornecedorControl->edit(Object(stdClass))
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}('7')
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#5 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(354): Router->run()
+#6 C:\xampp\htdocs\api.php(4): Roteador->start()
+#7 {main} 
+ **************************************************************************************************** 
+[2025-08-10 02:53:28.000] [Throwable] 
+ Throwable:
+Message: Fornecedor::setIdFornecedor(): Argument #1 ($idFornecedor) must be of type int, null given, called in C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php on line 59
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\models\Fornecedor.php
+Line: 27
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php(59): Fornecedor->setIdFornecedor(NULL)
+#1 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(206): FornecedorControl->edit(Object(stdClass))
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}('7')
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#5 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(354): Router->run()
+#6 C:\xampp\htdocs\api.php(4): Roteador->start()
+#7 {main} 
+ **************************************************************************************************** 
+[2025-08-10 02:53:28.000] [Throwable] 
+ Throwable:
+Message: Fornecedor::setIdFornecedor(): Argument #1 ($idFornecedor) must be of type int, null given, called in C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php on line 59
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\models\Fornecedor.php
+Line: 27
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php(59): Fornecedor->setIdFornecedor(NULL)
+#1 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(206): FornecedorControl->edit(Object(stdClass))
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}('7')
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#5 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(354): Router->run()
+#6 C:\xampp\htdocs\api.php(4): Roteador->start()
+#7 {main} 
+ **************************************************************************************************** 
+[2025-08-10 02:53:29.000] [Throwable] 
+ Throwable:
+Message: Fornecedor::setIdFornecedor(): Argument #1 ($idFornecedor) must be of type int, null given, called in C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php on line 59
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\models\Fornecedor.php
+Line: 27
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php(59): Fornecedor->setIdFornecedor(NULL)
+#1 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(206): FornecedorControl->edit(Object(stdClass))
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}('7')
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#5 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(354): Router->run()
+#6 C:\xampp\htdocs\api.php(4): Roteador->start()
+#7 {main} 
+ **************************************************************************************************** 
+[2025-08-10 02:53:54.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+Code: HY093
+File: C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php
+Line: 122
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php(122): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php(63): FornecedorDAO->update(Object(Fornecedor))
+#2 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(206): FornecedorControl->edit(Object(stdClass))
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}('7')
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(354): Router->run()
+#7 C:\xampp\htdocs\api.php(4): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-08-10 02:53:55.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+Code: HY093
+File: C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php
+Line: 122
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php(122): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php(63): FornecedorDAO->update(Object(Fornecedor))
+#2 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(206): FornecedorControl->edit(Object(stdClass))
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}('7')
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(354): Router->run()
+#7 C:\xampp\htdocs\api.php(4): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-08-10 02:55:11.000] [Throwable] 
+ Throwable:
+Message: Fornecedor::setIdFornecedor(): Argument #1 ($idFornecedor) must be of type int, null given, called in C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php on line 58
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\models\Fornecedor.php
+Line: 27
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php(58): Fornecedor->setIdFornecedor(NULL)
+#1 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(206): FornecedorControl->edit(Object(stdClass))
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}('7')
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#5 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(354): Router->run()
+#6 C:\xampp\htdocs\api.php(4): Roteador->start()
+#7 {main} 
+ **************************************************************************************************** 
+[2025-08-10 02:55:12.000] [Throwable] 
+ Throwable:
+Message: Fornecedor::setIdFornecedor(): Argument #1 ($idFornecedor) must be of type int, null given, called in C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php on line 58
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\models\Fornecedor.php
+Line: 27
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php(58): Fornecedor->setIdFornecedor(NULL)
+#1 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(206): FornecedorControl->edit(Object(stdClass))
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}('7')
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#5 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(354): Router->run()
+#6 C:\xampp\htdocs\api.php(4): Roteador->start()
+#7 {main} 
+ **************************************************************************************************** 
+[2025-08-10 02:56:17.000] [Throwable] 
+ Throwable:
+Message: Fornecedor::setIdFornecedor(): Argument #1 ($idFornecedor) must be of type int, null given, called in C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php on line 58
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\models\Fornecedor.php
+Line: 27
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php(58): Fornecedor->setIdFornecedor(NULL)
+#1 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(206): FornecedorControl->edit(Object(stdClass))
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}('7')
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#5 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(354): Router->run()
+#6 C:\xampp\htdocs\api.php(4): Roteador->start()
+#7 {main} 
+ **************************************************************************************************** 
+[2025-08-10 02:56:18.000] [Throwable] 
+ Throwable:
+Message: Fornecedor::setIdFornecedor(): Argument #1 ($idFornecedor) must be of type int, null given, called in C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php on line 58
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\models\Fornecedor.php
+Line: 27
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php(58): Fornecedor->setIdFornecedor(NULL)
+#1 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(206): FornecedorControl->edit(Object(stdClass))
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}('7')
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#5 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(354): Router->run()
+#6 C:\xampp\htdocs\api.php(4): Roteador->start()
+#7 {main} 
+ **************************************************************************************************** 
+[2025-08-10 03:03:16.000] [Throwable] 
+ Throwable:
+Message: Fornecedor::setIdFornecedor(): Argument #1 ($idFornecedor) must be of type int, null given, called in C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php on line 58
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\models\Fornecedor.php
+Line: 27
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php(58): Fornecedor->setIdFornecedor(NULL)
+#1 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(206): FornecedorControl->edit(Object(stdClass))
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}('7')
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#5 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(354): Router->run()
+#6 C:\xampp\htdocs\api.php(4): Roteador->start()
+#7 {main} 
+ **************************************************************************************************** 
+[2025-08-10 03:12:06.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+Code: HY093
+File: C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php
+Line: 146
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php(146): PDOStatement->execute()
+#1 C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php(64): FornecedorDAO->update(Object(Fornecedor))
+#2 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(206): FornecedorControl->edit(Object(stdClass))
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}('7')
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(354): Router->run()
+#7 C:\xampp\htdocs\api.php(4): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-08-10 03:12:08.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+Code: HY093
+File: C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php
+Line: 146
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\DAO\FornecedorDAO.php(146): PDOStatement->execute()
+#1 C:\xampp\htdocs\myAPI\src\controllers\FornecedorControl.php(64): FornecedorDAO->update(Object(Fornecedor))
+#2 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(206): FornecedorControl->edit(Object(stdClass))
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}('7')
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#5 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#6 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(354): Router->run()
+#7 C:\xampp\htdocs\api.php(4): Roteador->start()
+#8 {main} 
+ **************************************************************************************************** 
+[2025-08-11 23:53:19.000] [Throwable] 
+ Throwable:
+Message: Class "ProdutoControl" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\routes\Roteador.php
+Line: 286
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#3 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(350): Router->run()
+#4 C:\xampp\htdocs\api.php(4): Roteador->start()
+#5 {main} 
+ **************************************************************************************************** 
+[2025-08-11 23:53:34.000] [Throwable] 
+ Throwable:
+Message: Produto::setCategoria(): Argument #1 ($Categoria) must be of type Categoria, int given, called in C:\xampp\htdocs\myAPI\src\controllers\ProdutoController.php on line 44
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\models\Produto.php
+Line: 76
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\controllers\ProdutoController.php(44): Produto->setCategoria(6)
+#1 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(287): ProdutoController->store(Object(stdClass))
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#5 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(350): Router->run()
+#6 C:\xampp\htdocs\api.php(4): Roteador->start()
+#7 {main} 
+ **************************************************************************************************** 
+[2025-08-11 23:53:34.000] [Throwable] 
+ Throwable:
+Message: Produto::setCategoria(): Argument #1 ($Categoria) must be of type Categoria, int given, called in C:\xampp\htdocs\myAPI\src\controllers\ProdutoController.php on line 44
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\models\Produto.php
+Line: 76
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\controllers\ProdutoController.php(44): Produto->setCategoria(6)
+#1 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(287): ProdutoController->store(Object(stdClass))
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#5 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(350): Router->run()
+#6 C:\xampp\htdocs\api.php(4): Roteador->start()
+#7 {main} 
+ **************************************************************************************************** 
+[2025-08-11 23:53:35.000] [Throwable] 
+ Throwable:
+Message: Produto::setCategoria(): Argument #1 ($Categoria) must be of type Categoria, int given, called in C:\xampp\htdocs\myAPI\src\controllers\ProdutoController.php on line 44
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\models\Produto.php
+Line: 76
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\controllers\ProdutoController.php(44): Produto->setCategoria(6)
+#1 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(287): ProdutoController->store(Object(stdClass))
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#5 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(350): Router->run()
+#6 C:\xampp\htdocs\api.php(4): Roteador->start()
+#7 {main} 
+ **************************************************************************************************** 
+[2025-08-11 23:53:52.000] [Throwable] 
+ Throwable:
+Message: Produto::setCategoria(): Argument #1 ($Categoria) must be of type Categoria, int given, called in C:\xampp\htdocs\myAPI\src\controllers\ProdutoController.php on line 44
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\models\Produto.php
+Line: 76
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\controllers\ProdutoController.php(44): Produto->setCategoria(6)
+#1 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(287): ProdutoController->store(Object(stdClass))
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#5 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(350): Router->run()
+#6 C:\xampp\htdocs\api.php(4): Roteador->start()
+#7 {main} 
+ **************************************************************************************************** 
+[2025-08-11 23:53:53.000] [Throwable] 
+ Throwable:
+Message: Produto::setCategoria(): Argument #1 ($Categoria) must be of type Categoria, int given, called in C:\xampp\htdocs\myAPI\src\controllers\ProdutoController.php on line 44
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\models\Produto.php
+Line: 76
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\controllers\ProdutoController.php(44): Produto->setCategoria(6)
+#1 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(287): ProdutoController->store(Object(stdClass))
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#5 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(350): Router->run()
+#6 C:\xampp\htdocs\api.php(4): Roteador->start()
+#7 {main} 
+ **************************************************************************************************** 
+[2025-08-11 23:53:53.000] [Throwable] 
+ Throwable:
+Message: Produto::setCategoria(): Argument #1 ($Categoria) must be of type Categoria, int given, called in C:\xampp\htdocs\myAPI\src\controllers\ProdutoController.php on line 44
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\models\Produto.php
+Line: 76
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\controllers\ProdutoController.php(44): Produto->setCategoria(6)
+#1 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(287): ProdutoController->store(Object(stdClass))
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#5 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(350): Router->run()
+#6 C:\xampp\htdocs\api.php(4): Roteador->start()
+#7 {main} 
+ **************************************************************************************************** 
+[2025-08-11 23:53:54.000] [Throwable] 
+ Throwable:
+Message: Produto::setCategoria(): Argument #1 ($Categoria) must be of type Categoria, int given, called in C:\xampp\htdocs\myAPI\src\controllers\ProdutoController.php on line 44
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\models\Produto.php
+Line: 76
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\controllers\ProdutoController.php(44): Produto->setCategoria(6)
+#1 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(287): ProdutoController->store(Object(stdClass))
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#5 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(350): Router->run()
+#6 C:\xampp\htdocs\api.php(4): Roteador->start()
+#7 {main} 
+ **************************************************************************************************** 
+[2025-08-11 23:58:58.000] [Throwable] 
+ Throwable:
+Message: Produto::setCategoria(): Argument #1 ($Categoria) must be of type Categoria, int given, called in C:\xampp\htdocs\myAPI\src\controllers\ProdutoController.php on line 44
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\models\Produto.php
+Line: 76
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\controllers\ProdutoController.php(44): Produto->setCategoria(6)
+#1 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(287): ProdutoController->store(Object(stdClass))
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#5 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(350): Router->run()
+#6 C:\xampp\htdocs\api.php(4): Roteador->start()
+#7 {main} 
+ **************************************************************************************************** 
+[2025-08-26 22:51:17.000] [Throwable] 
+ Throwable:
+Message: Class "MeuTokenJWT" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 108
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(138): AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(517): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 22:51:17.000] [Throwable] 
+ Throwable:
+Message: Class "MeuTokenJWT" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 108
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(138): AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(517): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 22:51:18.000] [Throwable] 
+ Throwable:
+Message: Class "MeuTokenJWT" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 108
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(138): AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(517): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 22:51:19.000] [Throwable] 
+ Throwable:
+Message: Class "MeuTokenJWT" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 108
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(138): AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(517): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 22:51:19.000] [Throwable] 
+ Throwable:
+Message: Class "MeuTokenJWT" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 108
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(138): AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(517): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 22:51:20.000] [Throwable] 
+ Throwable:
+Message: Class "MeuTokenJWT" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 108
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(138): AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(517): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 22:51:27.000] [Throwable] 
+ Throwable:
+Message: Class "MeuTokenJWT" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 108
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(138): AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(517): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 22:51:28.000] [Throwable] 
+ Throwable:
+Message: Class "MeuTokenJWT" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 108
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(138): AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(517): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 22:51:34.000] [Throwable] 
+ Throwable:
+Message: Class "MeuTokenJWT" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 108
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(138): AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(517): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 22:53:33.000] [Throwable] 
+ Throwable:
+Message: Class "MeuTokenJWT" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 108
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(138): AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(517): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 22:53:34.000] [Throwable] 
+ Throwable:
+Message: Class "MeuTokenJWT" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 108
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(138): AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(517): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 22:53:35.000] [Throwable] 
+ Throwable:
+Message: Class "MeuTokenJWT" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 108
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(138): AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(517): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 22:53:43.000] [Throwable] 
+ Throwable:
+Message: Class "MeuTokenJWT" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 108
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(138): AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(517): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 22:53:44.000] [Throwable] 
+ Throwable:
+Message: Class "MeuTokenJWT" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 108
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(138): AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(517): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 22:53:44.000] [Throwable] 
+ Throwable:
+Message: Class "MeuTokenJWT" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 108
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(138): AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(517): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 22:56:28.000] [Throwable] 
+ Throwable:
+Message: Class "MeuTokenJWT" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 108
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(138): AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(517): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 22:56:29.000] [Throwable] 
+ Throwable:
+Message: Class "MeuTokenJWT" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 108
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(138): AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(517): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 22:59:27.000] [Throwable] 
+ Throwable:
+Message: Erro na verificação do token: Class "MeuTokenJWT" not found
+Code: 401
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 122
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(138): AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(517): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 22:59:32.000] [Throwable] 
+ Throwable:
+Message: Erro na verificação do token: Class "MeuTokenJWT" not found
+Code: 401
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 122
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(138): AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(517): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:01:42.000] [Throwable] 
+ Throwable:
+Message: Class "AuthMiddleware" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\routes\Roteador.php
+Line: 137
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#3 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(517): Router->run()
+#4 C:\xampp\htdocs\api.php(10): Roteador->start()
+#5 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:01:43.000] [Throwable] 
+ Throwable:
+Message: Class "AuthMiddleware" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\routes\Roteador.php
+Line: 137
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#3 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(517): Router->run()
+#4 C:\xampp\htdocs\api.php(10): Roteador->start()
+#5 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:01:44.000] [Throwable] 
+ Throwable:
+Message: Class "AuthMiddleware" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\routes\Roteador.php
+Line: 137
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#3 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(517): Router->run()
+#4 C:\xampp\htdocs\api.php(10): Roteador->start()
+#5 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:01:44.000] [Throwable] 
+ Throwable:
+Message: Class "AuthMiddleware" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\routes\Roteador.php
+Line: 137
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#3 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(517): Router->run()
+#4 C:\xampp\htdocs\api.php(10): Roteador->start()
+#5 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:01:45.000] [Throwable] 
+ Throwable:
+Message: Class "AuthMiddleware" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\routes\Roteador.php
+Line: 137
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#3 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(517): Router->run()
+#4 C:\xampp\htdocs\api.php(10): Roteador->start()
+#5 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:03:07.000] [Throwable] 
+ Throwable:
+Message: Class "AuthMiddleware" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\routes\Roteador.php
+Line: 140
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#3 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(521): Router->run()
+#4 C:\xampp\htdocs\api.php(10): Roteador->start()
+#5 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:03:07.000] [Throwable] 
+ Throwable:
+Message: Class "AuthMiddleware" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\routes\Roteador.php
+Line: 140
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#3 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(521): Router->run()
+#4 C:\xampp\htdocs\api.php(10): Roteador->start()
+#5 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:03:08.000] [Throwable] 
+ Throwable:
+Message: Class "AuthMiddleware" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\routes\Roteador.php
+Line: 140
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#3 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(521): Router->run()
+#4 C:\xampp\htdocs\api.php(10): Roteador->start()
+#5 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:06:19.000] [Throwable] 
+ Throwable:
+Message: Class "App\Middlewares\Exception" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 115
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(139): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(518): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:06:20.000] [Throwable] 
+ Throwable:
+Message: Class "App\Middlewares\Exception" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 115
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(139): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(518): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:07:29.000] [Throwable] 
+ Throwable:
+Message: Class "App\Middlewares\Exception" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 115
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(146): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(525): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:07:30.000] [Throwable] 
+ Throwable:
+Message: Class "App\Middlewares\Exception" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 115
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(146): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(525): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:07:30.000] [Throwable] 
+ Throwable:
+Message: Class "App\Middlewares\Exception" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 115
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(146): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(525): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:08:05.000] [Throwable] 
+ Throwable:
+Message: Class "App\Middlewares\Exception" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 114
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(139): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(518): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:08:58.000] [Throwable] 
+ Throwable:
+Message: Class "App\Middlewares\Exception" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 114
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(139): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(518): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:08:59.000] [Throwable] 
+ Throwable:
+Message: Class "App\Middlewares\Exception" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 114
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(139): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(518): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:08:59.000] [Throwable] 
+ Throwable:
+Message: Class "App\Middlewares\Exception" not found
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 114
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(139): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(518): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:10:34.000] [Throwable] 
+ Throwable:
+Message: Erro na verificação do token: Token inválido ou expirado
+Code: 401
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 124
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(139): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(518): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:10:35.000] [Throwable] 
+ Throwable:
+Message: Erro na verificação do token: Token inválido ou expirado
+Code: 401
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 124
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(139): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(518): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:10:36.000] [Throwable] 
+ Throwable:
+Message: Erro na verificação do token: Token inválido ou expirado
+Code: 401
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 124
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(139): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(518): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:11:53.000] [Throwable] 
+ Throwable:
+Message: Erro na verificação do token: Token inválido ou expirado
+Code: 401
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 124
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(139): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(518): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:18:35.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 86
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{\n    "email": ...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:18:37.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 86
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{\n    "email": ...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:18:38.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 86
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{\n    "email": ...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:18:38.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 86
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{\n    "email": ...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:18:40.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 86
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{\n    "email": ...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:19:55.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 86
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{\n    "email": ...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:19:55.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 86
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{\n    "email": ...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:20:23.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{\n    "email": ...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:20:23.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{\n    "email": ...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:20:24.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{\n    "email": ...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:21:39.000] [Throwable] 
+ Throwable:
+Message: Erro na verificação do token: Token inválido ou expirado
+Code: 401
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 75
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(140): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:21:40.000] [Throwable] 
+ Throwable:
+Message: Erro na verificação do token: Token inválido ou expirado
+Code: 401
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 75
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(140): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:21:40.000] [Throwable] 
+ Throwable:
+Message: Erro na verificação do token: Token inválido ou expirado
+Code: 401
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 75
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(140): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:21:41.000] [Throwable] 
+ Throwable:
+Message: Erro na verificação do token: Token inválido ou expirado
+Code: 401
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 75
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(140): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:21:54.000] [Throwable] 
+ Throwable:
+Message: Erro na verificação do token: App\Middlewares\AuthMiddleware::verificarToken(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 401
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 75
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(140): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:21:55.000] [Throwable] 
+ Throwable:
+Message: Erro na verificação do token: App\Middlewares\AuthMiddleware::verificarToken(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 401
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 75
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(140): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:22:01.000] [Throwable] 
+ Throwable:
+Message: Erro na verificação do token: App\Middlewares\AuthMiddleware::verificarToken(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 401
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 75
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(193): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:23:27.000] [Throwable] 
+ Throwable:
+Message: Erro na verificação do token: Token inválido ou expirado
+Code: 401
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 75
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(140): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:23:33.000] [Throwable] 
+ Throwable:
+Message: Erro na verificação do token: Token inválido ou expirado
+Code: 401
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 75
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(248): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:23:34.000] [Throwable] 
+ Throwable:
+Message: Erro na verificação do token: Token inválido ou expirado
+Code: 401
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 75
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(248): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:26:01.000] [Throwable] 
+ Throwable:
+Message: Erro na verificação do token: App\Middlewares\AuthMiddleware::verificarToken(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 401
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 75
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(248): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:26:02.000] [Throwable] 
+ Throwable:
+Message: Erro na verificação do token: App\Middlewares\AuthMiddleware::verificarToken(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 401
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 75
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(248): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:27:29.000] [Throwable] 
+ Throwable:
+Message: Erro na verificação do token: App\Middlewares\AuthMiddleware::verificarToken(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 401
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 75
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(140): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:27:30.000] [Throwable] 
+ Throwable:
+Message: Erro na verificação do token: App\Middlewares\AuthMiddleware::verificarToken(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 401
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 75
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(140): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:27:31.000] [Throwable] 
+ Throwable:
+Message: Erro na verificação do token: App\Middlewares\AuthMiddleware::verificarToken(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 401
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 75
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(140): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:27:31.000] [Throwable] 
+ Throwable:
+Message: Erro na verificação do token: App\Middlewares\AuthMiddleware::verificarToken(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 401
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 75
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(140): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:31:23.000] [Throwable] 
+ Throwable:
+Message: Erro na verificação do token: App\Middlewares\AuthMiddleware::verificarToken(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 401
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 75
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(140): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-26 23:31:24.000] [Throwable] 
+ Throwable:
+Message: Erro na verificação do token: App\Middlewares\AuthMiddleware::verificarToken(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 401
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 75
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(140): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 00:34:58.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 00:34:59.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 00:35:03.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 00:35:39.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 00:35:44.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 00:35:44.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 00:35:44.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 00:35:45.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 00:35:45.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 00:35:46.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 00:35:46.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 00:36:22.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 00:36:24.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 00:36:26.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 00:36:26.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 00:36:59.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 00:38:43.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 00:38:54.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 00:38:55.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 00:38:56.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 00:39:21.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 00:39:53.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 00:43:10.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 00:43:10.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 00:43:13.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 00:46:19.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 01:31:24.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 01:31:24.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 01:31:25.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 01:31:25.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 01:31:27.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 01:31:27.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 01:31:27.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 01:31:27.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 01:31:38.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 01:31:38.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 01:31:38.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 01:31:38.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 02:28:55.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(18): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 02:28:55.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(18): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 02:28:55.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(18): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 02:28:55.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(18): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 02:28:56.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(18): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 02:28:56.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(18): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 02:28:56.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(18): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 02:28:56.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(18): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 02:28:56.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(18): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 02:28:56.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(18): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 02:28:57.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(18): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 02:28:57.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(18): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 02:28:57.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(18): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 02:28:57.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(18): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 02:28:57.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(18): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 02:28:57.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(18): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 02:28:57.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(18): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 02:28:57.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(18): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 02:28:57.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(18): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-27 02:28:57.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(18): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 

@@ -1,0 +1,12 @@
+{
+    "name": "seu-nome/myapi",
+    "description": "Sua API com JWT",
+    "require": {
+        "firebase/php-jwt": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Firebase\\JWT\\": "src/jwt/"
+        }
+    }
+}
