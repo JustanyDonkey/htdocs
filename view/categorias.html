@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Categorias</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="categorias.html">
+                <i class="fas fa-store me-2"></i>Sistema de Gestão
+            </a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="categorias.html">Categorias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="fornecedores.html">Fornecedores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="produtos.html">Produtos</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <span class="navbar-text me-3" id="user-info"></span>
+                    <button class="btn btn-outline-light btn-sm" onclick="logout()">
+                        <i class="fas fa-sign-out-alt me-1"></i>Sair
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2><i class="fas fa-tags me-2"></i>Gestão de Categorias</h2>
+            <button class="btn btn-primary" onclick="showForm()">
+                <i class="fas fa-plus me-1"></i> Nova Categoria
+            </button>
+        </div>
+
+        <!-- Área de debug -->
+        <div class="alert alert-info" id="debug-info">
+            Inicializando...
+        </div>
+
+        <!-- Lista de Categorias -->
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>Data Criação</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabela-categorias">
+                            <tr>
+                                <td colspan="4" class="text-center">Carregando categorias...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulário de Categoria -->
+        <div class="card mt-4" id="form-categoria" style="display: none;">
+            <div class="card-body">
+                <h5 id="form-title">Nova Categoria</h5>
+                <form id="categoria-form">
+                    <input type="hidden" id="categoria-id">
+                    <div class="mb-3">
+                        <label for="categoria-nome" class="form-label">Nome da Categoria</label>
+                        <input type="text" class="form-control" id="categoria-nome" required>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-primary">Salvar</button>
+                        <button type="button" class="btn btn-secondary" onclick="hideForm()">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        import ApiService from './ApiService.js';
+        
+        let apiService;
+        let categorias = [];
+        let editando = false;
+        const debugInfo = document.getElementById('debug-info');
+
+        document.addEventListener('DOMContentLoaded', async function() {
+            // Verificar autenticação
+            const token = localStorage.getItem('jwt_token');
+            const usuario = JSON.parse(localStorage.getItem('usuario') || '{}');
+            
+            if (!token) {
+                debugInfo.textContent = 'Usuário não autenticado. Redirecionando...';
+                debugInfo.className = 'alert alert-warning';
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 2000);
+                return;
+            }
+
+            // Inicializar ApiService
+            apiService = new ApiService(token);
+            document.getElementById('user-info').textContent = `Olá, ${usuario.nome || 'Usuário'}`;
+
+            // Carregar categorias
+            await carregarCategorias();
+        });
+
+        // Função para extrair array de qualquer estrutura
+        function extrairArrayDeDados(resposta) {
+            console.log('🔍 Analisando estrutura da resposta:', resposta);
+            
+            // Se já for um array, retorna diretamente
+            if (Array.isArray(resposta)) {
+                console.log('✅ Resposta é um array direto');
+                return resposta;
+            }
+            
+            // Se for objeto, procura por propriedades que sejam arrays
+            if (typeof resposta === 'object' && resposta !== null) {
+                const propriedadesArray = [];
+                
+                // Lista todas as propriedades do objeto
+                for (const key in resposta) {
+                    if (Array.isArray(resposta[key])) {
+                        console.log(`✅ Encontrado array na propriedade: ${key}`);
+                        propriedadesArray.push({ key, value: resposta[key] });
+                    }
+                }
+                
+                // Se encontrou exatamente uma propriedade array, retorna ela
+                if (propriedadesArray.length === 1) {
+                    return propriedadesArray[0].value;
+                }
+                
+                // Se encontrou múltiplas, tenta escolher a mais provável
+                if (propriedadesArray.length > 1) {
+                    const prioridades = ['data', 'categorias', 'items', 'results', 'values'];
+                    for (const prioridade of prioridades) {
+                        const encontrado = propriedadesArray.find(p => p.key === prioridade);
+                        if (encontrado) {
+                            console.log(`✅ Usando array prioritário: ${prioridade}`);
+                            return encontrado.value;
+                        }
+                    }
+                    // Se não encontrou prioridade, retorna o primeiro array
+                    console.log(`⚠️  Múltiplos arrays encontrados, usando o primeiro: ${propriedadesArray[0].key}`);
+                    return propriedadesArray[0].value;
+                }
+                
+                // Se não encontrou arrays, procura por objetos aninhados
+                console.log('🔍 Nenhum array encontrado, procurando em objetos aninhados...');
+                for (const key in resposta) {
+                    if (typeof resposta[key] === 'object' && resposta[key] !== null) {
+                        const resultadoRecursivo = extrairArrayDeDados(resposta[key]);
+                        if (Array.isArray(resultadoRecursivo)) {
+                            console.log(`✅ Encontrado array recursivamente em: ${key}`);
+                            return resultadoRecursivo;
+                        }
+                    }
+                }
+            }
+            
+            console.log('❌ Nenhum array encontrado na resposta');
+            return null;
+        }
+
+        // Carregar categorias - VERSÃO UNIVERSAL
+        async function carregarCategorias() {
+            try {
+                debugInfo.textContent = 'Conectando à API...';
+                debugInfo.className = 'alert alert-info';
+                
+                console.log('🌐 Fazendo requisição GET para /categorias...');
+                
+                const resposta = await apiService.get('/categorias');
+                
+                console.log('📦 RESPOSTA CRUA DA API:', resposta);
+                console.log('📊 Tipo da resposta:', typeof resposta);
+                
+                if (resposta !== null && resposta !== undefined) {
+                    // Tenta extrair o array de dados de qualquer estrutura
+                    const dadosExtraidos = extrairArrayDeDados(resposta);
+                    
+                    if (Array.isArray(dadosExtraidos)) {
+                        categorias = dadosExtraidos;
+                        console.log(`✅ ${categorias.length} categorias extraídas:`, categorias);
+                        
+                        if (categorias.length > 0) {
+                            console.log('📝 Exemplo do primeiro item:', categorias[0]);
+                            console.log('🔑 Chaves do primeiro item:', Object.keys(categorias[0]));
+                        }
+                        
+                        renderizarCategorias();
+                        debugInfo.textContent = `Carregadas ${categorias.length} categorias`;
+                        debugInfo.className = 'alert alert-success';
+                    } else {
+                        // Se não conseguiu extrair array, mostra a resposta completa
+                        console.log('❌ Não foi possível extrair array. Estrutura completa:');
+                        console.dir(resposta);
+                        
+                        debugInfo.innerHTML = `
+                            <strong>Estrutura não reconhecida</strong><br>
+                            Verifique o console (F12) para ver a resposta completa.<br>
+                            Tipo: ${typeof resposta}<br>
+                            Estrutura: ${JSON.stringify(resposta).substring(0, 200)}...
+                        `;
+                        debugInfo.className = 'alert alert-danger';
+                    }
+                } else {
+                    debugInfo.textContent = 'Resposta vazia ou indefinida da API';
+                    debugInfo.className = 'alert alert-danger';
+                }
+            } catch (error) {
+                console.error('💥 Erro completo:', error);
+                debugInfo.textContent = `Erro: ${error.message}`;
+                debugInfo.className = 'alert alert-danger';
+                
+                // Mostra mais detalhes do erro
+                if (error.response) {
+                    console.error('📡 Resposta do erro:', error.response);
+                }
+            }
+        }
+
+        // Renderizar tabela SUPER FLEXÍVEL
+        function renderizarCategorias() {
+            const tbody = document.getElementById('tabela-categorias');
+            tbody.innerHTML = '';
+
+            if (categorias.length === 0) {
+                tbody.innerHTML = `
+                    <tr>
+                        <td colspan="4" class="text-center">Nenhuma categoria encontrada</td>
+                    </tr>
+                `;
+                return;
+            }
+
+            categorias.forEach((categoria, index) => {
+                // Extrai dados de qualquer estrutura possível
+                const id = extrairValor(categoria, ['idCategoria', 'id', 'ID', 'Id', 'codigo', 'code']);
+                const nome = extrairValor(categoria, ['nomeCategoria', 'nome', 'Nome', 'name', 'descricao', 'description']);
+                const data = extrairValor(categoria, ['data_criacao', 'dataCriacao', 'criadoEm', 'createdAt', 'data', 'timestamp']);
+                
+                console.log(`📊 Categoria ${index}:`, { id, nome, data, objeto: categoria });
+
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>${id || 'N/A'}</td>
+                    <td>${nome || 'Sem nome'}</td>
+                    <td>${formatarData(data)}</td>
+                    <td>
+                        <button class="btn btn-sm btn-warning me-1" onclick="editarCategoria('${id}')">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="btn btn-sm btn-danger" onclick="excluirCategoria('${id}')">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // Função para extrair valor de qualquer campo possível
+        function extrairValor(objeto, chavesPossiveis) {
+            for (const chave of chavesPossiveis) {
+                if (objeto[chave] !== undefined && objeto[chave] !== null) {
+                    return objeto[chave];
+                }
+            }
+            return null;
+        }
+
+        // Formatador de data
+        function formatarData(dataString) {
+            try {
+                if (!dataString || dataString === 'N/A') return 'N/A';
+                // Tenta converter para data
+                const data = new Date(dataString);
+                if (!isNaN(data.getTime())) {
+                    return data.toLocaleDateString('pt-BR');
+                }
+                return dataString; // Se não for data válida, retorna o original
+            } catch {
+                return dataString || 'N/A';
+            }
+        }
+
+        // Mostrar formulário
+        window.showForm = function() {
+            document.getElementById('form-categoria').style.display = 'block';
+            document.getElementById('form-title').textContent = 'Nova Categoria';
+            editando = false;
+        }
+
+        // Ocultar formulário
+        window.hideForm = function() {
+            document.getElementById('form-categoria').style.display = 'none';
+            document.getElementById('categoria-form').reset();
+        }
+
+        // Editar categoria
+        window.editarCategoria = function(id) {
+            const categoria = categorias.find(c => 
+                extrairValor(c, ['idCategoria', 'id', 'ID']) == id
+            );
+            
+            if (categoria) {
+                document.getElementById('categoria-id').value = extrairValor(categoria, ['idCategoria', 'id', 'ID']);
+                document.getElementById('categoria-nome').value = extrairValor(categoria, ['nomeCategoria', 'nome', 'Nome']);
+                document.getElementById('form-title').textContent = 'Editar Categoria';
+                document.getElementById('form-categoria').style.display = 'block';
+                editando = true;
+            }
+        }
+
+        // Excluir categoria
+        window.excluirCategoria = async function(id) {
+            if (confirm('Tem certeza que deseja excluir esta categoria?')) {
+                try {
+                    const resultado = await apiService.delete('/categorias', id);
+                    
+                    if (resultado && resultado.success) {
+                        debugInfo.textContent = 'Categoria excluída com sucesso!';
+                        debugInfo.className = 'alert alert-success';
+                        await carregarCategorias();
+                    } else {
+                        debugInfo.textContent = 'Erro ao excluir: ' + (resultado?.message || 'Erro desconhecido');
+                        debugInfo.className = 'alert alert-danger';
+                    }
+                } catch (error) {
+                    debugInfo.textContent = 'Erro ao excluir: ' + error.message;
+                    debugInfo.className = 'alert alert-danger';
+                }
+            }
+        }
+
+        // Salvar categoria
+        document.getElementById('categoria-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const nome = document.getElementById('categoria-nome').value;
+            const id = document.getElementById('categoria-id').value;
+            
+            try {
+                let resultado;
+                const dados = { nomeCategoria: nome };
+                
+                if (editando) {
+                    resultado = await apiService.put('/categorias', id, {
+                        Categoria: dados
+                    });
+                } else {
+                    resultado = await apiService.post('/categorias', {
+                        Categoria: dados
+                    });
+                }
+                
+                console.log('💾 Resposta do save:', resultado);
+                
+                if (resultado && resultado.success) {
+                    debugInfo.textContent = editando ? 'Categoria atualizada!' : 'Categoria criada!';
+                    debugInfo.className = 'alert alert-success';
+                    hideForm();
+                    await carregarCategorias();
+                } else {
+                    debugInfo.textContent = 'Erro: ' + (resultado?.message || 'Erro desconhecido');
+                    debugInfo.className = 'alert alert-danger';
+                }
+            } catch (error) {
+                debugInfo.textContent = 'Erro: ' + error.message;
+                debugInfo.className = 'alert alert-danger';
+            }
+        });
+
+        // Logout
+        window.logout = function() {
+            localStorage.removeItem('jwt_token');
+            localStorage.removeItem('usuario');
+            window.location.href = 'index.html';
+        };
+    </script>
+</body>
+</html>
