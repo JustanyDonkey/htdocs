@@ -9,7 +9,7 @@ class AuthMiddleware
     /**
      * Valida o JSON de login e retorna os dados
      */
-    public function validarJsonLogin(string $json): stdClass
+    public function validarJsonLogin(string $json): \stdClass
 {
     try {
         error_log('Validando JSON login: ' . $json);
@@ -76,7 +76,7 @@ class AuthMiddleware
         }
     }
 
-    public function verificarAdmin(): stdClass
+    public function verificarAdmin(): \stdClass
     {
         $usuario = $this->verificarToken();
         
@@ -125,7 +125,7 @@ class AuthMiddleware
     /**
      * Valida dados de registro de usuário
      */
-    public function validarRegistro($requestBody): stdClass
+    public function validarRegistro($requestBody): \stdClass
     {
         $stdRegistro = json_decode($requestBody);
         
