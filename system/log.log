@@ -3045,3 +3045,492 @@ Trace:
 #5 C:\xampp\htdocs\api.php(18): Roteador->start()
 #6 {main} 
  **************************************************************************************************** 
+[2025-08-28 19:25:55.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Code: 2002
+File: C:\xampp\htdocs\myAPI\src\db\Database.php
+Line: 121
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\db\Database.php(121): PDO->__construct('mysql:host=127....', 'root', Object(SensitiveParameterValue), Array)
+#1 C:\xampp\htdocs\myAPI\src\db\Database.php(69): Database::connect()
+#2 C:\xampp\htdocs\myAPI\src\DAO\CategoriaDAO.php(29): Database::getConnection()
+#3 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(162): CategoriaDAO->readById(3)
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}('3')
+#5 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#6 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#7 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#8 C:\xampp\htdocs\api.php(10): Roteador->start()
+#9 {main} 
+ **************************************************************************************************** 
+[2025-08-28 19:26:04.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Code: 2002
+File: C:\xampp\htdocs\myAPI\src\db\Database.php
+Line: 121
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\db\Database.php(121): PDO->__construct('mysql:host=127....', 'root', Object(SensitiveParameterValue), Array)
+#1 C:\xampp\htdocs\myAPI\src\db\Database.php(69): Database::connect()
+#2 C:\xampp\htdocs\myAPI\src\DAO\CategoriaDAO.php(29): Database::getConnection()
+#3 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(162): CategoriaDAO->readById(3)
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}('3')
+#5 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#6 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#7 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#8 C:\xampp\htdocs\api.php(10): Roteador->start()
+#9 {main} 
+ **************************************************************************************************** 
+[2025-08-28 19:26:07.000] [Throwable] 
+ Throwable:
+Message: SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+Code: 2002
+File: C:\xampp\htdocs\myAPI\src\db\Database.php
+Line: 121
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\db\Database.php(121): PDO->__construct('mysql:host=127....', 'root', Object(SensitiveParameterValue), Array)
+#1 C:\xampp\htdocs\myAPI\src\db\Database.php(69): Database::connect()
+#2 C:\xampp\htdocs\myAPI\src\DAO\CategoriaDAO.php(29): Database::getConnection()
+#3 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(162): CategoriaDAO->readById(3)
+#4 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}('3')
+#5 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#6 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#7 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#8 C:\xampp\htdocs\api.php(10): Roteador->start()
+#9 {main} 
+ **************************************************************************************************** 
+[2025-08-28 20:02:42.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-28 20:02:43.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-28 20:02:56.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-28 20:02:57.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-28 20:03:00.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-28 20:03:00.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-28 20:03:04.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-28 20:07:23.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-28 20:07:40.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-28 20:07:44.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-28 20:07:44.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-28 20:07:44.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-28 20:07:45.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{"email":"admin...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-28 20:08:14.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{\n    "email": ...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-28 20:08:15.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{\n    "email": ...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-28 20:08:15.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{\n    "email": ...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-28 20:08:16.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{\n    "email": ...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-28 20:08:16.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{\n    "email": ...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-28 20:08:17.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{\n    "email": ...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-28 20:08:17.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{\n    "email": ...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-28 20:08:19.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{\n    "email": ...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-28 20:08:20.000] [Throwable] 
+ Throwable:
+Message: App\Middlewares\AuthMiddleware::validarJsonLogin(): Return value must be of type App\Middlewares\stdClass, stdClass returned
+Code: 0
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 32
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(64): App\Middlewares\AuthMiddleware->validarJsonLogin('{\n    "email": ...')
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(10): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-28 23:51:28.000] [Throwable] 
+ Throwable:
+Message: Erro na verificação do token: Token não fornecido
+Code: 401
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 75
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(140): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(19): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-28 23:51:53.000] [Throwable] 
+ Throwable:
+Message: Erro na verificação do token: Token não fornecido
+Code: 401
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 75
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(140): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(19): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-29 00:04:58.000] [Throwable] 
+ Throwable:
+Message: Erro na verificação do token: Token inválido ou expirado
+Code: 401
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 75
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(140): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(20): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-29 00:04:58.000] [Throwable] 
+ Throwable:
+Message: Erro na verificação do token: Token inválido ou expirado
+Code: 401
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 75
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(193): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(20): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-29 00:05:58.000] [Throwable] 
+ Throwable:
+Message: Erro na verificação do token: Token não fornecido
+Code: 401
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 75
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(140): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(20): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-29 00:05:58.000] [Throwable] 
+ Throwable:
+Message: Erro na verificação do token: Token não fornecido
+Code: 401
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 75
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(140): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(20): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
+[2025-08-29 00:14:04.000] [Throwable] 
+ Throwable:
+Message: Erro na verificação do token: Token não fornecido
+Code: 401
+File: C:\xampp\htdocs\myAPI\src\middlewares\AuthMiddleware.php
+Line: 75
+Trace:
+#0 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(140): App\Middlewares\AuthMiddleware->verificarToken()
+#1 C:\xampp\htdocs\myAPI\src\routes\Router.php(458): Roteador->{closure}()
+#2 C:\xampp\htdocs\myAPI\src\routes\Router.php(440): Router->invoke(Object(Closure), Array)
+#3 C:\xampp\htdocs\myAPI\src\routes\Router.php(287): Router->handle(Array, true)
+#4 C:\xampp\htdocs\myAPI\src\routes\Roteador.php(519): Router->run()
+#5 C:\xampp\htdocs\api.php(20): Roteador->start()
+#6 {main} 
+ **************************************************************************************************** 
