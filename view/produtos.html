@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Produtos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .card {
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+        .table-responsive {
+            min-height: 300px;
+        }
+        .btn-action {
+            padding: 0.25rem 0.5rem;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="categorias.html">
+                <i class="fas fa-store me-2"></i>Sistema de Gestão
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="categorias.html">Categorias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="fornecedores.html">Fornecedores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="produtos.html">Produtos</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <span class="navbar-text me-3" id="user-info"></span>
+                    <button class="btn btn-outline-light btn-sm" onclick="logout()">
+                        <i class="fas fa-sign-out-alt me-1"></i>Sair
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2><i class="fas fa-box me-2"></i>Gestão de Produtos</h2>
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalProduto">
+                <i class="fas fa-plus me-1"></i>Novo Produto
+            </button>
+        </div>
+        
+        <div class="alert alert-info d-none" id="debug-info"></div>
+
+        <!-- Tabela de produtos -->
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>Preço</th>
+                                <th>Estoque</th>
+                                <th>Categoria</th>
+                                <th>Fornecedor</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabela-produtos">
+                            <tr>
+                                <td colspan="7" class="text-center">Carregando produtos...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para adicionar/editar produto -->
+    <div class="modal fade" id="modalProduto" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalProdutoTitle">Adicionar Produto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formProduto">
+                        <input type="hidden" id="produtoId">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="produtoNome" class="form-label">Nome do Produto *</label>
+                                <input type="text" class="form-control" id="produtoNome" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="produtoPreco" class="form-label">Preço (R$) *</label>
+                                <input type="number" step="0.01" min="0" class="form-control" id="produtoPreco" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="produtoEstoque" class="form-label">Quantidade em Estoque *</label>
+                                <input type="number" min="0" class="form-control" id="produtoEstoque" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="produtoCategoria" class="form-label">Categoria *</label>
+                                <select class="form-select" id="produtoCategoria" required>
+                                    <option value="">Selecione uma categoria</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="produtoFornecedor" class="form-label">Fornecedor *</label>
+                            <select class="form-select" id="produtoFornecedor" required>
+                                <option value="">Selecione um fornecedor</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="btnSalvarProduto">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de confirmação de exclusão -->
+    <div class="modal fade" id="modalConfirmacao" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirmar Exclusão</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Tem certeza que deseja excluir este produto? Esta ação não pode ser desfeita.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-danger" id="btnConfirmarExclusao">Excluir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module">
+        import ApiService from './ApiService.js';
+        
+        // Inicialização
+        let apiService;
+        let produtoParaExcluir = null;
+        const modalProduto = new bootstrap.Modal(document.getElementById('modalProduto'));
+        const modalConfirmacao = new bootstrap.Modal(document.getElementById('modalConfirmacao'));
+        
+        // Elementos DOM
+        const debugInfo = document.getElementById('debug-info');
+        const tabelaProdutos = document.getElementById('tabela-produtos');
+        const produtoCategoria = document.getElementById('produtoCategoria');
+        const produtoFornecedor = document.getElementById('produtoFornecedor');
+        
+        // Dados auxiliares
+        let categorias = [];
+        let fornecedores = [];
+        let produtos = [];
+        
+        document.addEventListener('DOMContentLoaded', async function() {
+            // Verificar autenticação
+            const token = localStorage.getItem('jwt_token');
+            if (!token) {
+                window.location.href = 'index.html';
+                return;
+            }
+            
+            apiService = new ApiService(token);
+            
+            // Carregar dados do usuário
+            const usuario = JSON.parse(localStorage.getItem('usuario') || '{}');
+            document.getElementById('user-info').textContent = `Olá, ${usuario.nome || 'Usuário'}`;
+            
+            // Configurar eventos
+            document.getElementById('btnSalvarProduto').addEventListener('click', salvarProduto);
+            document.getElementById('btnConfirmarExclusao').addEventListener('click', confirmarExclusao);
+            
+            // Carregar dados iniciais
+            await carregarDadosAuxiliares();
+            await carregarProdutos();
+        });
+        
+        // Função para extrair array de qualquer estrutura
+        function extrairArrayDeDados(resposta) {
+            console.log('🔍 Analisando estrutura:', resposta);
+            
+            if (Array.isArray(resposta)) return resposta;
+            
+            if (typeof resposta === 'object' && resposta !== null) {
+                // Procura por propriedades array
+                for (const key in resposta) {
+                    if (Array.isArray(resposta[key])) {
+                        console.log(`✅ Array encontrado em: ${key}`);
+                        return resposta[key];
+                    }
+                }
+                
+                // Procura em objetos aninhados
+                for (const key in resposta) {
+                    if (typeof resposta[key] === 'object' && resposta[key] !== null) {
+                        const resultado = extrairArrayDeDados(resposta[key]);
+                        if (Array.isArray(resultado)) return resultado;
+                    }
+                }
+            }
+            
+            console.log('❌ Nenhum array encontrado');
+            return null;
+        }
+        
+        // Função para extrair valor de qualquer campo possível
+        function extrairValor(objeto, chavesPossiveis) {
+            for (const chave of chavesPossiveis) {
+                if (objeto[chave] !== undefined && objeto[chave] !== null && objeto[chave] !== '') {
+                    return objeto[chave];
+                }
+            }
+            return null;
+        }
+        
+        // Carregar categorias e fornecedores
+        async function carregarDadosAuxiliares() {
+            try {
+                mostrarMensagem('Carregando categorias e fornecedores...', 'info');
+                
+                // Carregar categorias
+                const respostaCategorias = await apiService.get('/categorias');
+                const categoriasExtraidas = extrairArrayDeDados(respostaCategorias);
+                
+                if (Array.isArray(categoriasExtraidas)) {
+                    categorias = categoriasExtraidas;
+                    produtoCategoria.innerHTML = '<option value="">Selecione uma categoria</option>';
+                    
+                    categorias.forEach(categoria => {
+                        const id = extrairValor(categoria, ['idCategoria', 'id', 'ID', 'categoria_id']);
+                        const nome = extrairValor(categoria, ['nomeCategoria', 'nome', 'Nome']);
+                        if (id && nome) {
+                            produtoCategoria.innerHTML += `<option value="${id}">${nome}</option>`;
+                        }
+                    });
+                }
+                
+                // Carregar fornecedores
+                const respostaFornecedores = await apiService.get('/fornecedores');
+                const fornecedoresExtraidos = extrairArrayDeDados(respostaFornecedores);
+                
+                if (Array.isArray(fornecedoresExtraidos)) {
+                    fornecedores = fornecedoresExtraidos;
+                    produtoFornecedor.innerHTML = '<option value="">Selecione um fornecedor</option>';
+                    
+                    fornecedores.forEach(fornecedor => {
+                        const id = extrairValor(fornecedor, ['idFornecedor', 'id', 'ID', 'fornecedor_id']);
+                        const nome = extrairValor(fornecedor, ['nomeFornecedor', 'nome', 'Nome']);
+                        if (id && nome) {
+                            produtoFornecedor.innerHTML += `<option value="${id}">${nome}</option>`;
+                        }
+                    });
+                }
+                
+            } catch (error) {
+                console.error('Erro ao carregar dados auxiliares:', error);
+                mostrarMensagem('Erro ao carregar categorias e fornecedores: ' + error.message, 'danger');
+            }
+        }
+        
+        // Carregar produtos
+        async function carregarProdutos() {
+            try {
+                mostrarMensagem('Carregando produtos...', 'info');
+                const resultado = await apiService.get('/produtos');
+                
+                console.log('📦 Resposta completa dos produtos:', resultado);
+                
+                // Use a função de extração universal
+                const dadosExtraidos = extrairArrayDeDados(resultado);
+                
+                if (Array.isArray(dadosExtraidos)) {
+                    produtos = dadosExtraidos;
+                    renderizarProdutos(produtos);
+                    mostrarMensagem(`Produtos carregados: ${produtos.length} itens`, 'success');
+                } else {
+                    console.log('❌ Estrutura não reconhecida:', resultado);
+                    mostrarMensagem('Estrutura de dados inválida. Verifique o console.', 'danger');
+                }
+            } catch (error) {
+                console.error('💥 Erro ao carregar produtos:', error);
+                mostrarMensagem('Erro ao carregar produtos: ' + error.message, 'danger');
+            }
+        }
+        
+        // Renderizar produtos na tabela
+        function renderizarProdutos(produtos) {
+            tabelaProdutos.innerHTML = '';
+            
+            if (produtos.length === 0) {
+                tabelaProdutos.innerHTML = `
+                    <tr>
+                        <td colspan="7" class="text-center">Nenhum produto encontrado</td>
+                    </tr>
+                `;
+                return;
+            }
+            
+            produtos.forEach(produto => {
+                // Use extrairValor para campos flexíveis
+                const id = extrairValor(produto, ['idProduto', 'id', 'ID']);
+                const nome = extrairValor(produto, ['nomeProduto', 'nome', 'Nome']);
+                const preco = extrairValor(produto, ['precoProduto', 'preco', 'Preco', 'valor']);
+                const estoque = extrairValor(produto, ['quantidade_estoqueProduto', 'quantidade_estoque', 'estoque', 'quantidade']);
+                
+                // Para categoria e fornecedor, precisamos buscar os nomes pelos IDs
+                const categoriaId = extrairValor(produto, ['categoria_idCategoria', 'Categoria_idCategoria', 'categoria.id']);
+                const fornecedorId = extrairValor(produto, ['Fornecedor_idFornecedor', 'Fornecedor.idFornecedor', 'fornecedor.id']);
+                
+                const categoriaNome = categorias.find(c => extrairValor(c, ['idCategoria', 'id']) == categoriaId)?.nomeCategoria || 'N/A';
+                const fornecedorNome = fornecedores.find(f => extrairValor(f, ['idFornecedor', 'id']) == fornecedorId)?.nomeFornecedor || 'N/A';
+                
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>${id || 'N/A'}</td>
+                    <td>${nome || 'Sem nome'}</td>
+                    <td>R$ ${parseFloat(preco || 0).toFixed(2)}</td>
+                    <td>${estoque || 0}</td>
+                    <td>${categoriaNome}</td>
+                    <td>${fornecedorNome}</td>
+                    <td>
+                        <button class="btn btn-sm btn-warning me-1 btn-action" onclick="editarProduto('${id}')">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="btn btn-sm btn-danger btn-action" onclick="solicitarExclusao('${id}')">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                `;
+                tabelaProdutos.appendChild(tr);
+            });
+        }
+        
+        // Abrir modal para edição
+        window.editarProduto = async function(id) {
+            try {
+                const resultado = await apiService.getById('/produtos', id);
+                console.log('📦 Resposta do produto:', resultado);
+                
+                // Use extração universal para a resposta também
+                const produto = extrairArrayDeDados(resultado) || resultado.data || resultado;
+                
+                if (produto) {
+                    document.getElementById('modalProdutoTitle').textContent = 'Editar Produto';
+                    document.getElementById('produtoId').value = id;
+                    document.getElementById('produtoNome').value = extrairValor(produto, ['nomeProduto', 'nome', 'Nome']) || '';
+                    document.getElementById('produtoPreco').value = extrairValor(produto, ['precoProduto', 'preco', 'Preco']) || '';
+                    document.getElementById('produtoEstoque').value = extrairValor(produto, ['quantidade_estoqueProduto', 'quantidade_estoque', 'estoque']) || '';
+                    
+                    // Use extrairValor para os IDs também
+                    const categoriaId = extrairValor(produto, ['categoria_idCategoria', 'Categoria_idCategoria', 'Categoria.idCategoria', 'categoria.id']);
+                    const fornecedorId = extrairValor(produto, ['Fornecedor_idFornecedor', 'Fornecedor.idFornecedor', 'fornecedor.id']);
+                    
+                    document.getElementById('produtoCategoria').value = categoriaId || '';
+                    document.getElementById('produtoFornecedor').value = fornecedorId || '';
+                    
+                    modalProduto.show();
+                } else {
+                    mostrarMensagem('Produto não encontrado', 'danger');
+                }
+            } catch (error) {
+                console.error('💥 Erro ao carregar produto:', error);
+                mostrarMensagem('Erro ao carregar produto: ' + error.message, 'danger');
+            }
+        };
+        
+        // Solicitar exclusão
+        window.solicitarExclusao = function(id) {
+            produtoParaExcluir = id;
+            modalConfirmacao.show();
+        };
+        
+        // Confirmar exclusão
+        async function confirmarExclusao() {
+            if (!produtoParaExcluir) return;
+            
+            try {
+                const resultado = await apiService.delete('/produtos', produtoParaExcluir);
+                
+                if (resultado && resultado.success) {
+                    mostrarMensagem('Produto excluído com sucesso', 'success');
+                    await carregarProdutos();
+                } else {
+                    mostrarMensagem('Erro ao excluir: ' + (resultado?.message || 'Erro desconhecido'), 'danger');
+                }
+            } catch (error) {
+                console.error('💥 Erro ao excluir:', error);
+                mostrarMensagem('Erro ao excluir: ' + error.message, 'danger');
+            } finally {
+                modalConfirmacao.hide();
+                produtoParaExcluir = null;
+            }
+        }
+        
+        // Salvar produto (criar ou atualizar)
+        async function salvarProduto() {
+            const produtoId = document.getElementById('produtoId').value;
+            
+            // ✅ ESTRUTURA CORRETA que a API espera (com base no código do roteador)
+            const produtoData = {
+                Produto: {
+                    nomeProduto: document.getElementById('produtoNome').value,
+                    precoProduto: parseFloat(document.getElementById('produtoPreco').value),
+                    quantidade_estoqueProduto: parseInt(document.getElementById('produtoEstoque').value),
+                    Categoria: {
+                        idCategoria: parseInt(document.getElementById('produtoCategoria').value)
+                    },
+                    Fornecedor: {
+                        idFornecedor: parseInt(document.getElementById('produtoFornecedor').value)
+                    }
+                }
+            };
+            
+            console.log('📤 Enviando dados:', produtoData);
+            
+            // Validação básica
+            if (!produtoData.Produto.nomeProduto || !produtoData.Produto.precoProduto || 
+                !produtoData.Produto.Categoria.idCategoria || !produtoData.Produto.Fornecedor.idFornecedor) {
+                mostrarMensagem('Preencha todos os campos obrigatórios', 'danger');
+                return;
+            }
+            
+            try {
+                let resultado;
+                
+                if (produtoId) {
+                    // ✅ PUT - Atualizar produto existente
+                    resultado = await apiService.put('/produtos', produtoId, produtoData);
+                } else {
+                    // ✅ POST - Criar novo produto
+                    resultado = await apiService.post('/produtos', produtoData);
+                }
+                
+                console.log('💾 Resposta do save:', resultado);
+                
+                if (resultado && resultado.success) {
+                    mostrarMensagem(`Produto ${produtoId ? 'atualizado' : 'criado'} com sucesso!`, 'success');
+                    modalProduto.hide();
+                    formProduto.reset();
+                    document.getElementById('produtoId').value = '';
+                    await carregarProdutos();
+                } else {
+                    mostrarMensagem('Erro: ' + (resultado?.message || 'Erro desconhecido'), 'danger');
+                }
+            } catch (error) {
+                console.error('💥 Erro ao salvar:', error);
+                mostrarMensagem('Erro ao salvar: ' + error.message, 'danger');
+            }
+        }
+        
+        // Mostrar mensagens
+        function mostrarMensagem(mensagem, tipo) {
+            debugInfo.textContent = mensagem;
+            debugInfo.className = `alert alert-${tipo}`;
+            debugInfo.classList.remove('d-none');
+            
+            // Ocultar automaticamente após 5 segundos
+            setTimeout(() => {
+                debugInfo.classList.add('d-none');
+            }, 5000);
+        }
+        
+        // Logout
+        window.logout = function() {
+            localStorage.removeItem('jwt_token');
+            localStorage.removeItem('usuario');
+            window.location.href = 'index.html';
+        };
+        
+        // Limpar formulário ao abrir modal para novo produto
+        document.getElementById('modalProduto').addEventListener('show.bs.modal', function() {
+            if (!document.getElementById('produtoId').value) {
+                document.getElementById('modalProdutoTitle').textContent = 'Adicionar Produto';
+                formProduto.reset();
+            }
+        });
+    </script>
+</body>
+</html>
