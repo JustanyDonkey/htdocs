@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Fornecedores</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .card {
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="categorias.html">
+                <i class="fas fa-store me-2"></i>Sistema de Gestão
+            </a>
+            <div class="navbar-nav me-auto">
+                <a class="nav-link" href="categorias.html">Categorias</a>
+                <a class="nav-link active" href="fornecedores.html">Fornecedores</a>
+                <a class="nav-link" href="produtos.html">Produtos</a>
+            </div>
+            <div class="d-flex">
+                <span class="navbar-text me-3" id="user-info"></span>
+                <button class="btn btn-outline-light btn-sm" onclick="logout()">
+                    <i class="fas fa-sign-out-alt me-1"></i>Sair
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2><i class="fas fa-truck me-2"></i>Gestão de Fornecedores</h2>
+            <button class="btn btn-success" onclick="showForm()">
+                <i class="fas fa-plus me-1"></i> Novo Fornecedor
+            </button>
+        </div>
+        
+        <div class="alert alert-info" id="debug-info">
+            Carregando fornecedores...
+        </div>
+
+        <!-- Tabela de fornecedores -->
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>Email</th>
+                                <th>Telefone</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabela-fornecedores">
+                            <tr>
+                                <td colspan="5" class="text-center">Carregando...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal para adicionar/editar fornecedor -->
+        <div class="modal fade" id="modalFornecedor" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalFornecedorTitle">Novo Fornecedor</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="formFornecedor">
+                            <input type="hidden" id="fornecedorId">
+                            <div class="mb-3">
+                                <label for="fornecedorNome" class="form-label">Nome do Fornecedor</label>
+                                <input type="text" class="form-control" id="fornecedorNome" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="fornecedorEmail" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="fornecedorEmail" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="fornecedorTelefone" class="form-label">Telefone</label>
+                                <input type="tel" class="form-control" id="fornecedorTelefone" required>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary" id="btnSalvarFornecedor">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de confirmação de exclusão -->
+        <div class="modal fade" id="modalConfirmacao" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Confirmar Exclusão</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Tem certeza que deseja excluir este fornecedor?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-danger" id="btnConfirmarExclusao">Excluir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module">
+        import ApiService from './ApiService.js';
+        
+        let apiService;
+        let fornecedores = [];
+        let fornecedorParaExcluir = null;
+        const modalFornecedor = new bootstrap.Modal(document.getElementById('modalFornecedor'));
+        const modalConfirmacao = new bootstrap.Modal(document.getElementById('modalConfirmacao'));
+        const debugInfo = document.getElementById('debug-info');
+
+        document.addEventListener('DOMContentLoaded', async function() {
+            // Verificar autenticação
+            const token = localStorage.getItem('jwt_token');
+            if (!token) {
+                window.location.href = 'index.html';
+                return;
+            }
+
+            // Inicializar ApiService
+            apiService = new ApiService(token);
+
+            // Carregar dados do usuário
+            const usuario = JSON.parse(localStorage.getItem('usuario') || '{}');
+            document.getElementById('user-info').textContent = `Olá, ${usuario.nome || 'Usuário'}`;
+
+            // Configurar eventos
+            document.getElementById('btnSalvarFornecedor').addEventListener('click', salvarFornecedor);
+            document.getElementById('btnConfirmarExclusao').addEventListener('click', confirmarExclusao);
+
+            // Carregar fornecedores
+            await carregarFornecedores();
+        });
+
+        // Função para extrair array de qualquer estrutura
+        function extrairArrayDeDados(resposta) {
+            console.log('🔍 Analisando estrutura da resposta:', resposta);
+            
+            if (Array.isArray(resposta)) {
+                console.log('✅ Resposta é um array direto');
+                return resposta;
+            }
+            
+            if (typeof resposta === 'object' && resposta !== null) {
+                const propriedadesArray = [];
+                
+                for (const key in resposta) {
+                    if (Array.isArray(resposta[key])) {
+                        console.log(`✅ Encontrado array na propriedade: ${key}`);
+                        propriedadesArray.push({ key, value: resposta[key] });
+                    }
+                }
+                
+                if (propriedadesArray.length === 1) {
+                    return propriedadesArray[0].value;
+                }
+                
+                if (propriedadesArray.length > 1) {
+                    const prioridades = ['data', 'fornecedores', 'items', 'results'];
+                    for (const prioridade of prioridades) {
+                        const encontrado = propriedadesArray.find(p => p.key === prioridade);
+                        if (encontrado) {
+                            console.log(`✅ Usando array prioritário: ${prioridade}`);
+                            return encontrado.value;
+                        }
+                    }
+                    return propriedadesArray[0].value;
+                }
+                
+                for (const key in resposta) {
+                    if (typeof resposta[key] === 'object' && resposta[key] !== null) {
+                        const resultadoRecursivo = extrairArrayDeDados(resposta[key]);
+                        if (Array.isArray(resultadoRecursivo)) {
+                            return resultadoRecursivo;
+                        }
+                    }
+                }
+            }
+            
+            console.log('❌ Nenhum array encontrado na resposta');
+            return null;
+        }
+
+        // Carregar fornecedores
+        async function carregarFornecedores() {
+            try {
+                debugInfo.textContent = 'Conectando à API...';
+                
+                console.log('🌐 Fazendo requisição GET para /fornecedores...');
+                
+                const resposta = await apiService.get('/fornecedores');
+                
+                console.log('📦 Resposta da API:', resposta);
+                
+                if (resposta !== null && resposta !== undefined) {
+                    const dadosExtraidos = extrairArrayDeDados(resposta);
+                    
+                    if (Array.isArray(dadosExtraidos)) {
+                        fornecedores = dadosExtraidos;
+                        console.log(`✅ ${fornecedores.length} fornecedores carregados`);
+                        renderizarFornecedores(fornecedores);
+                        debugInfo.textContent = `Fornecedores carregados: ${fornecedores.length} itens`;
+                        debugInfo.className = 'alert alert-success';
+                    } else {
+                        console.log('❌ Não foi possível extrair array');
+                        debugInfo.textContent = 'Estrutura não reconhecida. Verifique o console (F12)';
+                        debugInfo.className = 'alert alert-danger';
+                    }
+                } else {
+                    debugInfo.textContent = 'Resposta vazia da API';
+                    debugInfo.className = 'alert alert-danger';
+                }
+            } catch (error) {
+                console.error('💥 Erro:', error);
+                debugInfo.textContent = `Erro: ${error.message}`;
+                debugInfo.className = 'alert alert-danger';
+            }
+        }
+
+        // Função para extrair valor de qualquer campo possível
+        function extrairValor(objeto, chavesPossiveis) {
+            for (const chave of chavesPossiveis) {
+                if (objeto[chave] !== undefined && objeto[chave] !== null) {
+                    return objeto[chave];
+                }
+            }
+            return null;
+        }
+
+        // Renderizar fornecedores
+        function renderizarFornecedores(fornecedores) {
+            const tbody = document.getElementById('tabela-fornecedores');
+            tbody.innerHTML = '';
+
+            if (fornecedores.length === 0) {
+                tbody.innerHTML = `
+                    <tr>
+                        <td colspan="5" class="text-center">Nenhum fornecedor encontrado</td>
+                    </tr>
+                `;
+                return;
+            }
+
+            fornecedores.forEach((fornecedor) => {
+                const id = extrairValor(fornecedor, ['idFornecedor', 'id', 'ID']);
+                const nome = extrairValor(fornecedor, ['nomeFornecedor', 'nome', 'Nome']);
+                const email = extrairValor(fornecedor, ['emailFornecedor', 'email', 'Email']);
+                const telefone = extrairValor(fornecedor, ['telefoneFornecedor', 'telefone', 'Telefone']);
+
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>${id || 'N/A'}</td>
+                    <td>${nome || 'Sem nome'}</td>
+                    <td>${email || 'N/A'}</td>
+                    <td>${telefone || 'N/A'}</td>
+                    <td>
+                        <button class="btn btn-sm btn-warning me-1" onclick="editarFornecedor('${id}')">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="btn btn-sm btn-danger" onclick="solicitarExclusao('${id}')">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // Mostrar modal para novo fornecedor
+        window.showForm = function() {
+            document.getElementById('modalFornecedorTitle').textContent = 'Novo Fornecedor';
+            document.getElementById('fornecedorId').value = '';
+            document.getElementById('formFornecedor').reset();
+            modalFornecedor.show();
+        }
+
+        // Editar fornecedor
+        window.editarFornecedor = async function(id) {
+            try {
+                const resultado = await apiService.getById('/fornecedores', id);
+                
+                if (resultado && resultado.success) {
+                    const fornecedor = resultado.data || resultado;
+                    
+                    document.getElementById('modalFornecedorTitle').textContent = 'Editar Fornecedor';
+                    document.getElementById('fornecedorId').value = id;
+                    document.getElementById('fornecedorNome').value = extrairValor(fornecedor, ['nomeFornecedor', 'nome', 'Nome']);
+                    document.getElementById('fornecedorEmail').value = extrairValor(fornecedor, ['emailFornecedor', 'email', 'Email']);
+                    document.getElementById('fornecedorTelefone').value = extrairValor(fornecedor, ['telefoneFornecedor', 'telefone', 'Telefone']);
+                    
+                    modalFornecedor.show();
+                } else {
+                    alert('Erro ao carregar fornecedor: ' + (resultado?.message || 'Erro desconhecido'));
+                }
+            } catch (error) {
+                alert('Erro: ' + error.message);
+            }
+        }
+
+        // Solicitar exclusão
+        window.solicitarExclusao = function(id) {
+            fornecedorParaExcluir = id;
+            modalConfirmacao.show();
+        }
+
+        // Confirmar exclusão
+        async function confirmarExclusao() {
+            if (!fornecedorParaExcluir) return;
+            
+            try {
+                const resultado = await apiService.delete('/fornecedores', fornecedorParaExcluir);
+                
+                if (resultado && resultado.success) {
+                    debugInfo.textContent = 'Fornecedor excluído com sucesso';
+                    debugInfo.className = 'alert alert-success';
+                    modalConfirmacao.hide();
+                    await carregarFornecedores();
+                } else {
+                    alert('Erro ao excluir: ' + (resultado?.message || 'Erro desconhecido'));
+                }
+            } catch (error) {
+                alert('Erro: ' + error.message);
+            } finally {
+                fornecedorParaExcluir = null;
+            }
+        }
+
+        // Salvar fornecedor
+        async function salvarFornecedor() {
+            const id = document.getElementById('fornecedorId').value;
+            const nome = document.getElementById('fornecedorNome').value;
+            const email = document.getElementById('fornecedorEmail').value;
+            const telefone = document.getElementById('fornecedorTelefone').value;
+            
+            try {
+                let resultado;
+                const dados = {
+                    nomeFornecedor: nome,
+                    emailFornecedor: email,
+                    telefoneFornecedor: telefone
+                };
+                
+                if (id) {
+                    // Editar
+                    resultado = await apiService.put('/fornecedores', id, {
+                        Fornecedor: dados
+                    });
+                } else {
+                    // Criar
+                    resultado = await apiService.post('/fornecedores', {
+                        Fornecedor: dados
+                    });
+                }
+                
+                if (resultado && resultado.success) {
+                    debugInfo.textContent = id ? 'Fornecedor atualizado!' : 'Fornecedor criado!';
+                    debugInfo.className = 'alert alert-success';
+                    modalFornecedor.hide();
+                    await carregarFornecedores();
+                } else {
+                    alert('Erro: ' + (resultado?.message || 'Erro desconhecido'));
+                }
+            } catch (error) {
+                alert('Erro: ' + error.message);
+            }
+        }
+
+        window.logout = function() {
+            localStorage.removeItem('jwt_token');
+            localStorage.removeItem('usuario');
+            window.location.href = 'index.html';
+        };
+    </script>
+</body>
+</html>
