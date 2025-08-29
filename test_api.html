@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico - Gestão de Produtos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .card {
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            margin-bottom: 20px;
+        }
+        .debug-section {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        pre {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .step-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: #0d6efd;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h1><i class="fas fa-bug me-2"></i>Diagnóstico - Problema de Validação de Produto</h1>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-info">
+                    <i class="fas fa-info-circle me-2"></i>
+                    Esta página ajuda a diagnosticar o problema de validação de produtos no sistema.
+                </div>
+
+                <div class="debug-section">
+                    <h4><span class="step-number">1</span> Estrutura de Dados Esperada pela API</h4>
+                    <p>Com base na mensagem de erro "Produto inválido", a API provavelmente espera uma estrutura diferente da que está sendo enviada.</p>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Possível Estrutura 1:</h5>
+                            <pre>{
+  "nome": "Nome do Produto",
+  "preco": 10.50,
+  "quantidade_estoque": 100,
+  "categoria_id": 1,
+  "fornecedor_id": 1
+}</pre>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Possível Estrutura 2:</h5>
+                            <pre>{
+  "produto": {
+    "nome": "Nome do Produto",
+    "preco": 10.50,
+    "quantidade_estoque": 100,
+    "categoria_id": 1,
+    "fornecedor_id": 1
+  }
+}</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="debug-section">
+                    <h4><span class="step-number">2</span> Teste de Validação de Dados</h4>
+                    <p>Preencha os dados abaixo para simular o envio à API e verificar a estrutura gerada:</p>
+                    
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="testNome" class="form-label">Nome do Produto</label>
+                            <input type="text" class="form-control" id="testNome" value="teste">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="testPreco" class="form-label">Preço</label>
+                            <input type="number" step="0.01" class="form-control" id="testPreco" value="1.17">
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="testEstoque" class="form-label">Estoque</label>
+                            <input type="number" class="form-control" id="testEstoque" value="4">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="testCategoria" class="form-label">ID da Categoria</label>
+                            <input type="number" class="form-control" id="testCategoria" placeholder="ID numérico">
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="testFornecedor" class="form-label">ID do Fornecedor</label>
+                            <input type="number" class="form-control" id="testFornecedor" placeholder="ID numérico">
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <button class="btn btn-primary" onclick="testarEstrutura()">Testar Estrutura de Dados</button>
+                    </div>
+                    
+                    <div id="resultadoTeste" class="mt-3" style="display: none;">
+                        <h5>Estrutura Gerada:</h5>
+                        <pre id="estruturaGerada"></pre>
+                    </div>
+                </div>
+
+                <div class="debug-section">
+                    <h4><span class="step-number">3</span> Possíveis Causas do Problema</h4>
+                    <ul>
+                        <li>IDs de categoria ou fornecedor inválidos</li>
+                        <li>Formatação incorreta de números (vírgula vs ponto decimal)</li>
+                        <li>Estrutura de dados diferente da esperada pela API</li>
+                        <li>Campos obrigatórios faltando</li>
+                        <li>Problema de validação no servidor</li>
+                    </ul>
+                </div>
+
+                <div class="debug-section">
+                    <h4><span class="step-number">4</span> Soluções Recomendadas</h4>
+                    <ol>
+                        <li>Verifique se os IDs de categoria e fornecedor existem no banco de dados</li>
+                        <li>Garanta que está usando ponto decimal para valores monetários</li>
+                        <li>Consulte a documentação da API para ver a estrutura exata esperada</li>
+                        <li>Verifique os logs do servidor para mais detalhes do erro</li>
+                        <li>Teste a API diretamente com ferramentas como Postman ou Insomnia</li>
+                    </ol>
+                </div>
+
+                <div class="debug-section">
+                    <h4><span class="step-number">5</span> Ferramentas Úteis</h4>
+                    <p>Use estas ferramentas para diagnosticar melhor o problema:</p>
+                    <ul>
+                        <li>Console do navegador (F12) para ver erros de JavaScript</li>
+                        <li>Rede do navegador (F12 → Rede) para ver as requisições HTTP</li>
+                        <li>Postman ou Insomnia para testar a API diretamente</li>
+                        <li>Logs do servidor para ver detalhes dos erros</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function testarEstrutura() {
+            const nome = document.getElementById('testNome').value;
+            const preco = parseFloat(document.getElementById('testPreco').value);
+            const estoque = parseInt(document.getElementById('testEstoque').value);
+            const categoriaId = document.getElementById('testCategoria').value;
+            const fornecedorId = document.getElementById('testFornecedor').value;
+            
+            // Testar diferentes estruturas
+            const estrutura1 = {
+                nome: nome,
+                preco: preco,
+                quantidade_estoque: estoque,
+                categoria_id: categoriaId ? parseInt(categoriaId) : null,
+                fornecedor_id: fornecedorId ? parseInt(fornecedorId) : null
+            };
+            
+            const estrutura2 = {
+                produto: {
+                    nome: nome,
+                    preco: preco,
+                    quantidade_estoque: estoque,
+                    categoria_id: categoriaId ? parseInt(categoriaId) : null,
+                    fornecedor_id: fornecedorId ? parseInt(fornecedorId) : null
+                }
+            };
+            
+            const resultado = `
+// Estrutura 1 (diretamente):
+${JSON.stringify(estrutura1, null, 2)}
+
+// Estrutura 2 (aninhada em "produto"):
+${JSON.stringify(estrutura2, null, 2)}
+
+// Valores numéricos:
+- Preco: ${preco} (tipo: ${typeof preco})
+- Estoque: ${estoque} (tipo: ${typeof estoque})
+- Categoria ID: ${categoriaId || 'não informado'} (tipo: ${categoriaId ? typeof parseInt(categoriaId) : 'n/a'})
+- Fornecedor ID: ${fornecedorId || 'não informado'} (tipo: ${fornecedorId ? typeof parseInt(fornecedorId) : 'n/a'})
+`;
+            
+            document.getElementById('estruturaGerada').textContent = resultado;
+            document.getElementById('resultadoTeste').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
